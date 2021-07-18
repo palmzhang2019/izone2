@@ -38,10 +38,10 @@ TOOL_FLAG = True
 API_FLAG = False
 # DEBUG模式是否开始的选择
 # 值为0：所有平台关闭DEBUG,值为1:所有平台开启DEBUG,值为其他：根据平台类型判断开启（默认设置的Windows下才开启）
-DEBUG = True
+DEBUG = False
 
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.tendcode.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -76,8 +76,21 @@ INSTALLED_APPS = [
     'blog',  # 博客应用
     'tool',  # 工具
     'comment',  # 评论
+    'ckeditor',
+    'ckeditor_uploader'
 
 ]
+
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',  # 工具条功能
+        'height': 300,  # 编辑器高度
+        'width': 800,  # 编辑器宽
+    },
+}
+
+CKEDITOR_UPLOAD_PATH = '/www/wwwroot/www.nihonstudy.net/media/upload'
 
 # 自定义用户model
 AUTH_USER_MODEL = 'oauth.Ouser'
@@ -183,11 +196,23 @@ USE_TZ = False  # 关闭国际时间，不然数据库报错
 
 # 静态文件收集
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATIC_ROOT = '/www/wwwroot/www.nihonstudy.net/static'
+
+STATICFILES_DIRS = [
+    '/www/wwwroot/www.nihonstudy.net/apps/blog/static',
+    '/www/wwwroot/www.nihonstudy.net/apps/comment/static',
+    '/www/wwwroot/www.nihonstudy.net/apps/tool/static'
+    ]
 
 # 媒体文件收集
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+print(MEDIA_ROOT)
+CKEDITOR_JQUERY_URL = 'https://cdn.bootcss.com/jquery/2.1.4/jquery.js'
+CKEDITOR_UPLOAD_PATH = "static/upload"
+CKEDITOR_IMAGE_BACKEND = "pillow"
 
 # 统一分页设置
 BASE_PAGE_BY = 10
@@ -226,9 +251,9 @@ REST_FRAMEWORK = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 修改数据库为MySQL，并进行配置
-        'NAME': 'mysite',       # 数据库的名称
-        'USER': 'root',        # 数据库的用户名
-        'PASSWORD': 'python',  # 数据库的密码
+        'NAME': 'www_nihonstudy_n',       # 数据库的名称
+        'USER': 'www_nihonstudy_n',        # 数据库的用户名
+        'PASSWORD': 'DykhzH2LDnZBx8Mh',  # 数据库的密码
         'HOST': '127.0.0.1',
         'PORT': 3306,
         'OPTIONS': {'charset': 'utf8', }
@@ -246,6 +271,6 @@ EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = 'your-webname <your-email@163.com>'
 
 # 网站默认设置和上下文信息
-SITE_END_TITLE = '网站的名称，如TendCode'
-SITE_DESCRIPTION = '网站描述'
-SITE_KEYWORDS = '网站关键词，多个词用英文逗号隔开'
+SITE_END_TITLE = '日语学习笔记'
+SITE_DESCRIPTION = '本站专注于日语学习，站长本人也在学习日语，本站提供了日语中动词，形容词变换小工具。短期内怎么提高日语？怎么样练习日语口语？日语面试前需要准备什么？'
+SITE_KEYWORDS = '日语学习,日语动词变换,日语形容词变换,日语N2考试,日语150小时学习证明'

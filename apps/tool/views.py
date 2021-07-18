@@ -20,6 +20,8 @@ def Toolview(request):
 def BD_pushview(request):
     return render(request, 'tool/bd_push.html')
 
+def verb_deformed(request):
+    return render(request, 'tool/verb_deformed.html')
 
 @require_POST
 def bd_api_view(request):
