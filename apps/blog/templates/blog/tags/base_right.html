@@ -3,33 +3,33 @@
 
 <!--个人空间-->
 {% cache 1800 'cache_baseright_html_tag' %}
-<div class="card border-0 rounded-0 px-3 mb-2 mb-md-3 d-none d-lg-block" id="home-card">
-    <div class="card-header bg-white px-0">
-        <strong><i class="fa fa-paper-plane mr-2 f-17"></i>个人空间</strong>
-    </div>
-    <div class="card-body px-0 pt-3 pb-1">
-        <div class="row text-center">
-            <div class="col">
-                <a href="https://github.com/Hopetree" target="_blank" title="进入博主的Github查看博客源码">
-                    <img style="max-width:40px" alt="博主的github" src="{% static 'blog/img/github.png' %}">
-                    <p class="mt-2">Github</p>
-                </a>
-            </div>
-            <div class="col">
-                <a href="{% url 'blog:timeline'%}" target="_blank" title="查看网站建站历程">
-                    <img style="max-width:40px" alt="网站的建站历程" src="{% static 'blog/img/blog.png' %}">
-                    <p class="mt-2">Timeline</p>
-                </a>
-            </div>
-            <div class="col">
-                <a href="{% url 'rss'%}" target="_blank" title="订阅博客">
-                    <img style="max-width:40px" alt="订阅博客RSS" src="{% static 'blog/img/rss.png' %}">
-                    <p class="mt-2">RSS订阅</p>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="card border-0 rounded-0 px-3 mb-2 mb-md-3 d-none d-lg-block" id="home-card">-->
+<!--    <div class="card-header bg-white px-0">-->
+<!--        <strong><i class="fa fa-paper-plane mr-2 f-17"></i>个人空间</strong>-->
+<!--    </div>-->
+<!--    <div class="card-body px-0 pt-3 pb-1">-->
+<!--        <div class="row text-center">-->
+<!--            <div class="col">-->
+<!--                <a href="https://github.com/Hopetree" target="_blank" title="进入博主的Github查看博客源码">-->
+<!--                    <img style="max-width:40px" alt="博主的github" src="{% static 'blog/img/github.png' %}">-->
+<!--                    <p class="mt-2">Github</p>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="col">-->
+<!--                <a href="{% url 'blog:timeline'%}" target="_blank" title="查看网站建站历程">-->
+<!--                    <img style="max-width:40px" alt="网站的建站历程" src="{% static 'blog/img/blog.png' %}">-->
+<!--                    <p class="mt-2">Timeline</p>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="col">-->
+<!--                <a href="{% url 'rss'%}" target="_blank" title="订阅博客">-->
+<!--                    <img style="max-width:40px" alt="订阅博客RSS" src="{% static 'blog/img/rss.png' %}">-->
+<!--                    <p class="mt-2">RSS订阅</p>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 <!--文章分类-->
 <div class="card border-0 rounded-0 px-3 mb-2 mb-md-3" id="category-card">
     <div class="card-header bg-white px-0">
@@ -61,6 +61,20 @@
         </div>
     </div>
 </div>
+<!--日语助手-->
+<div class="card border-0 rounded-0 px-3 mb-2 mb-md-3" id="tools-card">
+    <div class="card-header bg-white px-0">
+        <strong><i class="fa fa-anchor mr-1"></i>日语助手</strong>
+    </div>
+
+    <ul class="list-group list-group-flush f-16">
+        <li class="list-group-item d-flex justify-content-between align-items-center pr-2 py-2">
+        <a href="http://www.nihonstudy.net/tool/verb_deformed/" class="category-item"
+           title="日语动词变换">日语动词在线变换</a>
+        </li>
+    </ul>
+</div>
+
 <!--友链-->
 <div class="d-none d-lg-block">
     <div class="card border-0 rounded-0 px-3 mb-2 mb-md-3" id="friends-card">

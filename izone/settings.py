@@ -209,7 +209,6 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-print(MEDIA_ROOT)
 CKEDITOR_JQUERY_URL = 'https://cdn.bootcss.com/jquery/2.1.4/jquery.js'
 CKEDITOR_UPLOAD_PATH = "static/upload"
 CKEDITOR_IMAGE_BACKEND = "pillow"
@@ -228,15 +227,15 @@ HAYSTACK_CONNECTIONS = {
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 # 使用django-redis缓存页面，缓存配置如下：
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
-    }
-}
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django_redis.cache.RedisCache",
+#         "LOCATION": "redis://127.0.0.1:6379/1",
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
+#         }
+#     }
+# }
 
 # restframework settings
 REST_FRAMEWORK = {
@@ -271,6 +270,6 @@ EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = 'your-webname <your-email@163.com>'
 
 # 网站默认设置和上下文信息
-SITE_END_TITLE = '日语学习笔记'
+SITE_END_TITLE = '霓虹Study'
 SITE_DESCRIPTION = '本站专注于日语学习，站长本人也在学习日语，本站提供了日语中动词，形容词变换小工具。短期内怎么提高日语？怎么样练习日语口语？日语面试前需要准备什么？'
 SITE_KEYWORDS = '日语学习,日语动词变换,日语形容词变换,日语N2考试,日语150小时学习证明'

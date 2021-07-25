@@ -1,0 +1,50 @@
+username: qeimlt1a
+password: 86f96800
+
+www_nihonstudy_n
+www_nihonstudy_n
+DykhzH2LDnZBx8Mh
+
+nihonstudy.net
+
+palm
+palm820828
+
+root
+palm820828
+
+sudo firewall-cmd --zone=public --permanent --add-port=8001/tcp
+sudo firewall-cmd --reload
+
+netstat -aptn
+
+ps aux | less
+
+
+/home/palmzhang19/izone/izone_venv/bin/uwsgi --ini /home/palmzhang19/izone/uwsgi.ini -w izone.wsgi:application
+/home/palmzhang19/izone/izone_venv/bin/uwsgi --ini /home/palmzhang19/izone/uwsgi.ini -w wsgi.wsgi:application
+
+
+1. 谷歌广告
+2. 加音频 √
+2.1. 音频材料 √
+2.2. 代码  √
+4. 文章与关键词，标签的关联 √
+5. 关键词
+	日语零基础应急 √
+6. 工具编写
+7. 谷歌收录
+
+https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=ja&q=おはようございます。
+https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=ja&q=%E3%81%8A%E3%81%AF%E3%82%88%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82
+
+<audio controls="">
+    <source src="/static/upload/1-1.mp3" type="audio/mpeg">
+</audio><br>
+
+python manage.py collectstatic
+
+2c2b2b
+
+霓虹Study发布最新校对的N2历年真题，这篇帖子是2019年7月日语N2考试的原题（原文）。此次一同发布的，还有所有真题的听力的原文及听力。
+霓虹Study提供日语能力考试历年答案汇总、真题是能力考备考不可或缺的资源之一，站长会继续更新历年日语考的真题，希望可以帮到大家。

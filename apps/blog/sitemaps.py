@@ -5,7 +5,7 @@ from django.db.models.aggregates import Count
 
 
 class ArticleSitemap(Sitemap):
-    changefreq = 'weekly'
+    changefreq = 'daily'
     priority = 1.0
 
     def items(self):
