@@ -23,6 +23,9 @@ def BD_pushview(request):
 def verb_deformed(request):
     return render(request, 'tool/verb_deformed.html')
 
+def adje_deformed(request):
+    return render(request, 'tool/adje_deformed.html')
+
 @require_POST
 def bd_api_view(request):
     if request.is_ajax():
@@ -279,6 +282,86 @@ def turn2useApassive(verb_d):
 
 def turn2stop(verb_d):
     return verb_d + "な"
+
+@require_POST
+def adje_deformed_view(request):
+    adje_d = request.POST.get('adje_d')
+    deform_what = request.POST.get('deform_what')
+    if deform_what == "1":
+        return JsonResponse({'msg': jian_1_1(adje_d)})
+    if deform_what == "2":
+        return JsonResponse({'msg': jing_1_1(adje_d)})
+    if deform_what == "3":
+        return JsonResponse({'msg': jian_0_1(adje_d)})
+    if deform_what == "4":
+        return JsonResponse({'msg': jing_0_1(adje_d)})
+    if deform_what == "5":
+        return JsonResponse({'msg': jian_1_0(adje_d)})
+    if deform_what == "6":
+        return JsonResponse({'msg': jing_1_0(adje_d)})
+    if deform_what == "7":
+        return JsonResponse({'msg': jian_0_0(adje_d)})
+    if deform_what == "8":
+        return JsonResponse({'msg': jing_0_0(adje_d)})
+    return JsonResponse({'msg': 'miss'})
+
+def detect_adje(word):
+    if word[-1] != "い":
+        return 2
+    else:
+        return 1
+
+def jian_1_1(adje_d):
+    # 简体肯定现在
+    if detect_adje(adje_d) == 1:
+        return adje_d
+    else:
+        return adje_d+"だ"
+
+def jing_1_1(adje_d):
+    # 敬体肯定现在
+    return adje_d + "です"
+
+def jian_0_1(adje_d):
+    # 简体否定现在
+    if detect_adje(adje_d) == 1:
+        return adje_d[:-1]+"くない"
+    else:
+        return [adje_d + "ではない"," / ", adje_d + "じゃない"]
+def jing_0_1(adje_d):
+    # 敬体否定现在
+    if detect_adje(adje_d) == 1:
+        return [adje_d[:-1]+"くないです", " / ", adje_d[:-1]+"くありません"]
+    else:
+        return [adje_d + "では(じゃ)ありません"," / ", adje_d + "では(じゃ)ないです"]
+
+def jian_1_0(adje_d):
+    # 简体肯定过去
+    if detect_adje(adje_d) == 1:
+        return adje_d[:-1] + "かった"
+    else:
+        return adje_d + "だった"
+
+def jing_1_0(adje_d):
+    # 敬体肯定过去
+    if detect_adje(adje_d) == 1:
+        return adje_d[:-1] + "かったです"
+    else:
+        return adje_d + "でした"
+
+def jian_0_0(adje_d):
+    # 简体否定过去
+    if detect_adje(adje_d) == 1:
+        return adje_d[:-1]+"くなかた"
+    else:
+        return [adje_d+"ではなかった", " / ", adje_d+"じゃなかった"]
+
+def jing_0_0(adje_d):
+    # 敬体否定过去
+    if detect_adje(adje_d) == 1:
+        return [adje_d[:-1]+"くなかったです", " / ", adje_d[:-1]+"くありませんでした"]
+    else:
+        return [adje_d+"では(じゃ)ありませんでした", " / ", adje_d+"では(じゃ)なかったです"]
 
 def verb_123(verb_d):
     last_c = verb_d[-1:]

@@ -1,0 +1,58 @@
+{% extends "tool/base_tool.html" %}
+{% load static %}
+
+{% block head_title %}日语动词形容词变形,日语学习工具,日语形容词在线变形{% endblock %}
+{% block metas %}
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+{% endblock %}
+
+{% block tool_name %}日语形容词变换工具{% endblock %}
+{% block left_content %}
+<div class="card-body p-0">
+    <h3 class="card-title pl-2 title-info">工具说明：</h3>
+    <ul>
+        <li>本工具使用python程序编辑，适合日语新手使用。</li>
+        <li>工具的作用是判断日语形容词的形态，并按照需要变成相应的形态。</li>
+        <li>日语中的形容词有总共有八种形态，分别是简体肯定（现在/将来）、敬体肯定（现在/将来）、简体否定（现在/将来）、敬体否定（现在/将来）、简体肯定（过去）、敬体肯定（过去）、简体否定（过去）、敬体否定（过去）</li>
+        <li>首先将需要查询的日语单词填写在输入框内。</li>
+        <li>然后再选择想要变换的形态，点击“确定”就可以得到需要转换的形态。</li>
+    </ul>
+</div>
+<div class="mb-3">
+    <div class="form-group">
+        <label>请填写需要转换的形容词：</label>
+        <input type="url" class="form-control rounded-0" id="adje_d"
+               placeholder="寒い"
+               required>
+    </div>
+    <div class="form-group">
+        <label>请选择需要转换的形态：</label>
+        <select name="" id="deform_what">
+            <option value="1">简体肯定（现在/将来）</option>
+            <option value="2">敬体肯定（现在/将来）</option>
+            <option value="3">简体否定（现在/将来）</option>
+            <option value="4">敬体否定（现在/将来）</option>
+            <option value="5">简体肯定（过去）</option>
+            <option value="6">敬体肯定（过去）</option>
+            <option value="7">简体否定（过去）</option>
+            <option value="8">敬体否定（过去）</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-info btn-sm rounded-0" id="start-push">确定</button>
+</div>
+<div class="card mb-3 rounded-0">
+    <div class="card-header text-center text-info font-weight-bold py-2">转换结果</div>
+    <div class="card-body push-result text-center py-3">结果显示区</div>
+</div>
+
+{% endblock %}
+
+{% block end_f %}
+<script>
+$('#start-push').click(function() {
+	adje_deformed_api("{{ csrf_token }}", "{% url 'tool:adje_deformed_api' %}");
+})
+
+</script>
+{% endblock %}
