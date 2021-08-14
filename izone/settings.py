@@ -41,7 +41,7 @@ API_FLAG = False
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.tendcode.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -228,7 +228,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',  # 修改数据库为MySQL，并进行配置
         'NAME': 'mysite',       # 数据库的名称
         'USER': 'root',        # 数据库的用户名
-        'PASSWORD': 'python',  # 数据库的密码
+        'PASSWORD': '0653a53ba891dc4c',  # 数据库的密码
         'HOST': '127.0.0.1',
         'PORT': 3306,
         'OPTIONS': {'charset': 'utf8', }
