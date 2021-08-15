@@ -16,7 +16,7 @@ import platform
 
 # 更换默认的数据库连接
 import pymysql
-
+from .database_config import data_config
 pymysql.install_as_MySQLdb()
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -221,24 +221,15 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 20
 }
 
-print("-----------------------")
-print(os.getenv("DATAPASS"))
-print("-----------------------")
-
 # 配置数据库
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 修改数据库为MySQL，并进行配置
-        'NAME': os.getenv('DATANAME'),       # 数据库的名称
-        'USER': os.getenv('DATAUSER'),        # 数据库的用户名
-        'PASSWORD': os.getenv('DATAPASS'),  # 数据库的密码
-        'HOST': os.getenv('DATAHOST'),
-        'PORT': os.getenv('DATAPORT'),
-        # 'NAME': "mysite",  # 数据库的名称
-        # 'USER': "root",  # 数据库的用户名
-        # 'PASSWORD': "0653a53ba891dc4c",  # 数据库的密码
-        # 'HOST': "127.0.0.1",
-        # 'PORT': 3306,
+        'NAME': data_config.get("DATANAME"),  # 数据库的名称
+        'USER': data_config.get("DATAUSER"),  # 数据库的用户名
+        'PASSWORD': data_config.get("DATAPASS"),  # 数据库的密码
+        'HOST': data_config.get("DATAHOST"),
+        'PORT': data_config.get("DATAPORT"),
         'OPTIONS': {'charset': 'utf8', }
     }
 }
