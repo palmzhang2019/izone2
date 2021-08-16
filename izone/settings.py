@@ -16,7 +16,7 @@ import platform
 
 # 更换默认的数据库连接
 import pymysql
-from .database_config import data_config
+from .database_config import data_config, debug_type, ckeditor_upload_path
 pymysql.install_as_MySQLdb()
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -38,7 +38,7 @@ TOOL_FLAG = True
 API_FLAG = False
 # DEBUG模式是否开始的选择
 # 值为0：所有平台关闭DEBUG,值为1:所有平台开启DEBUG,值为其他：根据平台类型判断开启（默认设置的Windows下才开启）
-DEBUG = True
+DEBUG = debug_type
 
 
 ALLOWED_HOSTS = ['*']
@@ -76,9 +76,20 @@ INSTALLED_APPS = [
     'tool',  # 工具
     'comment',  # 评论
     'ckeditor',
-    'ckeditor_uploader'
+    # 'ckeditor_uploader'
 
 ]
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',  # 工具条功能
+        'height': 300,  # 编辑器高度
+        'width': 800,  # 编辑器宽
+    },
+}
+
+CKEDITOR_UPLOAD_PATH = ckeditor_upload_path
+# CKEDITOR_IMAGE_BACKEND = 'pillow'
 
 # 自定义用户model
 AUTH_USER_MODEL = 'oauth.Ouser'

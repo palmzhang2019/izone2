@@ -20,6 +20,8 @@
     <script src="http://cdn.bootcss.com/headroom/0.5.0/headroom.min.js"></script>
     <!-- blog CSS -->
     <link href="{% static 'blog/css/base.css' %}?v=20171223.05" rel="stylesheet">
+    <link href="{% static 'ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css' %}"
+          rel="preload" as="style" onload="this.rel='stylesheet'">
     {% block top-file %}{% endblock %}
 </head>
 <body>
@@ -76,5 +78,6 @@ if(msgs>0){var _record=0;var myTitle=document.title;function titleBlink(){_recor
         </p>
     </div>
 </footer>
+<script async src="{% static 'ckeditor/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js' %}"></script>
 </body>
 </html>
