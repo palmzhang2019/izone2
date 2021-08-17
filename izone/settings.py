@@ -227,15 +227,15 @@ HAYSTACK_CONNECTIONS = {
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 # 使用django-redis缓存页面，缓存配置如下：
-# CACHES = {
-#     "default": {
-#         "BACKEND": "django_redis.cache.RedisCache",
-#         "LOCATION": "redis://127.0.0.1:6379/1",
-#         "OPTIONS": {
-#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
-#         }
-#     }
-# }
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
 
 # restframework settings
 REST_FRAMEWORK = {
@@ -251,8 +251,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 修改数据库为MySQL，并进行配置
         'NAME': 'www_nihonstudy_n',       # 数据库的名称
-        'USER': 'www_nihonstudy_n',        # 数据库的用户名
-        'PASSWORD': 'DykhzH2LDnZBx8Mh',  # 数据库的密码
+        'USER': 'root',        # 数据库的用户名
+        'PASSWORD': '2c590f59a74ba86c',  # 数据库的密码
         'HOST': '127.0.0.1',
         'PORT': 3306,
         'OPTIONS': {'charset': 'utf8', }
@@ -272,4 +272,4 @@ DEFAULT_FROM_EMAIL = 'your-webname <your-email@163.com>'
 # 网站默认设置和上下文信息
 SITE_END_TITLE = '霓虹Study'
 SITE_DESCRIPTION = '本站专注于日语学习，站长本人也在学习日语，本站提供了日语中动词，形容词变换小工具。短期内怎么提高日语？怎么样练习日语口语？日语面试前需要准备什么？'
-SITE_KEYWORDS = '日语学习,日语动词变换,日语形容词变换,日语N2考试,日语150小时学习证明'
+SITE_KEYWORDS = '日语考试听力,日语动词变形,日语备考'

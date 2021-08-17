@@ -3,26 +3,36 @@
 
 {% block head_title %}日语动词变,日语学习工具,日语动词在线变换{% endblock %}
 {% block metas %}
-    <meta name="description" content="日语动词在线变换,日语动词在线变换,日语て型变换,日语た型变换,日语命令型变换,日语可能型变换,日语假定型变换,日语意向型变换,日语被动型变换,日语使役型变换">
-    <meta name="keywords" content="日语动词在线变换,日语て型变换,日语た型变换,日语命令型变换,日语可能型变换,日语假定型变换,日语意向型变换,日语被动型变换,日语使役型变换">
+    <meta name="description" content="日语动词在线变形,日语动词在线变换,日语て形变换,日语た形变换,日语命令形变换,日语可能形变换,日语假定形变换,日语意向形变换,日语被动形变换,日语使役形变换">
+    <meta name="keywords" content="日语动词在线变形,日语て形变换,日语た形变换,日语命令形变换,日语可能形变换,日语假定形变换,日语意向形变换,日语被动形变换,日语使役形变换">
 {% endblock %}
 
-{% block tool_name %}日语动词变换工具{% endblock %}
+{% block tool_name %}日语动词在线变形工具{% endblock %}
 {% block left_content %}
 <div class="card-body p-0">
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Article",
+  "name" : "日语动词在线变形工具",
+  "articleSection" : [ "ます形变换方法", "ない形变换方法", "て形变换方法", "た形变换方法", "命令形变换方法", "可能形变换方法", "假定形变换方法", "意向形变换方法", "被动形变换方法", "使役形变换方法" ],
+  "articleBody" : "工具说明：</H3>\n    <UL>\n        <LI>本工具使用python程序编辑，适合日语新手使用。</LI>\n        <LI>工具的作用是判断日语动词的形态，并按照需要变成相应的形态。</LI>\n        <LI>日语动词包括原形在内共有13种形态，这给日语初学者造成了极大的困难。</LI>\n        <LI>日语的13种形态分别是原形，ます形，ない形，て形，た形，命令形，可能形，假定形，意向形，被动形，使役形，使役+被动形，禁止形。</LI>\n        <LI>首先将需要查询的日语单词填写在输入框内。</LI>\n        <LI>然后再选择想要变换的时态，点击“确定”就可以得到需要转换的形态。"
+}
+</script>
+    <h1 class="card-title">日语动词在线变形工具</h1>
     <h3 class="card-title pl-2 title-info">工具说明：</h3>
     <ul>
         <li>本工具使用python程序编辑，适合日语新手使用。</li>
         <li>工具的作用是判断日语动词的形态，并按照需要变成相应的形态。</li>
-        <li>日语动词包括原型在内共有13种形态，这给日语初学者造成了极大的困难。</li>
-        <li>日语的13种形态分别是原型，ます型，ない型，て型，た型，命令型，可能型，假定型，意向型，被动型，使役型，使役+被动型，禁止型。</li>
+        <li>日语动词包括原形在内共有13种形态，这给日语初学者造成了极大的困难。</li>
+        <li>日语的13种形态分别是原形，ます形，ない形，て形，た形，命令形，可能形，假定形，意向形，被动形，使役形，使役+被动形，禁止形。</li>
         <li>首先将需要查询的日语单词填写在输入框内。</li>
         <li>然后再选择想要变换的时态，点击“确定”就可以得到需要转换的形态。</li>
     </ul>
 </div>
 <div class="mb-3">
     <div class="form-group">
-        <label>请填写需要转换的动词原型：</label>
+        <label>请填写需要转换的动词原形：</label>
         <input type="url" class="form-control rounded-0" id="verb_d"
                placeholder="行く"
                required>
@@ -30,19 +40,19 @@
     <div class="form-group">
         <label>请选择需要转换的形态：</label>
         <select name="" id="deform_what">
-            <option value="1">原型</option>
-            <option value="2">ます型</option>
-            <option value="3">ない型</option>
-            <option value="4">て型</option>
-            <option value="5">た型</option>
-            <option value="6">命令型</option>
-            <option value="7">可能型</option>
-            <option value="8">假定型</option>
-            <option value="9">意向型</option>
-            <option value="10">被动型</option>
-            <option value="11">使役型</option>
-            <option value="12">使役+被动型</option>
-            <option value="13">禁止型</option>
+            <option value="1">原形</option>
+            <option value="2">ます形</option>
+            <option value="3">ない形</option>
+            <option value="4">て形</option>
+            <option value="5">た形</option>
+            <option value="6">命令形</option>
+            <option value="7">可能形</option>
+            <option value="8">假定形</option>
+            <option value="9">意向形</option>
+            <option value="10">被动形</option>
+            <option value="11">使役形</option>
+            <option value="12">使役+被动形</option>
+            <option value="13">禁止形</option>
         </select>
     </div>
     <button type="submit" class="btn btn-info btn-sm rounded-0" id="start-push">确定</button>
@@ -54,21 +64,21 @@
 <div class="card-body p-0">
     <h3 class="card-title pl-2 title-info">动词变换方法 ：</h3>
     <ul>
-        <li>ます型变换方法：
+        <li>ます形变换方法：
             <ul>
                 <li>一类动词：将结尾う段假名变成い段假名后+ます</li>
                 <li>二类动词：去る＋ます</li>
                 <li>三类动词：来（く）る→来（き）ます する→します</li>
             </ul>
         </li>
-        <li>ない型变换方法：
+        <li>ない形变换方法：
             <ul>
                 <li>一类动词：将结尾う段假名变成あ段假名后+ない。</li>
                 <li>二类动词：去る+ない。</li>
                 <li>三类动词：来（く）る→来(こ)ない する→しない。</li>
             </ul>
         </li>
-        <li>て型变换方法：
+        <li>て形变换方法：
             <ul>
                 <li>一类动词：<br>い音变：く→いて　ぐ→いで<br>促音变：う、つ、る为结尾的,去掉う、つ、る＋って<br>拨音变：む、ぬ、ぶ为结尾的去掉+む、ぬ、ぶ＋んで<br>
                 以す为结尾的：す→して</li>
@@ -76,7 +86,7 @@
                 <li>三类动词：来る→来（き）て する→して</li>
             </ul>
         </li>
-        <li>た型变换方法：
+        <li>た形变换方法：
             <ul>
                 <li>
                     一类动词：<br>い音变：く→いた　ぐ→いだ<br>促音变：う、つ、る为结尾的,去掉う、つ、る＋った<br>拨音变：む、ぬ、ぶ为结尾的去掉+む、ぬ、ぶ＋んだ<br>以す为结尾的：す→した
@@ -85,42 +95,42 @@
                 <li>三类动词：来る→来（き）た する→した</li>
             </ul>
         </li>
-        <li>命令型变换方法：
+        <li>命令形变换方法：
             <ul>
                 <li>一类动词：将结尾う段假名变成え段假名即可.</li>
                 <li>二类动词：去る+ろ</li>
                 <li>三类动词：来る→来（こ）い する→しろ</li>
             </ul>
         </li>
-        <li>可能型变换方法：
+        <li>可能形变换方法：
             <ul>
                 <li>一类动词：将结尾う段假名变成え段假名后+る</li>
                 <li>二类动词：去る+られる</li>
                 <li>三类动词：来る→来（こ）られる する→できる</li>
             </ul>
         </li>
-        <li>假定型变换方法：
+        <li>假定形变换方法：
             <ul>
                 <li>一类动词：将结尾う段假名变成え段假名后+ば</li>
                 <li>二类动词：去る+れば</li>
                 <li>三类动词：来る→来（く）れば する→すれば</li>
             </ul>
         </li>
-        <li>意向型变换方法：
+        <li>意向形变换方法：
             <ul>
                 <li>一类动词：将结尾う段假名变成お段假名+う</li>
                 <li>二类动词：去る+よう</li>
                 <li>三类动词：来る→来（こ）よう する→しよう</li>
             </ul>
         </li>
-        <li>被动型变换方法：
+        <li>被动形变换方法：
             <ul>
                 <li>一类动词：将结尾う段假名变成あ段上假名后+れる</li>
                 <li>二类动词：去る+られる</li>
                 <li>三类动词：来る→来（こ）られる する→される</li>
             </ul>    
         </li>
-        <li>使役型变换方法：
+        <li>使役形变换方法：
             <ul>
                 <li>一类动词：将结尾う段假名变成あ段上假名后+せる</li>
                 <li>二类动词：去る+させる</li>
