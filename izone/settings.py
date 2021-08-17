@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import os
 import sys
 import platform
-
+from .database_config import *
 # 更换默认的数据库连接
 import pymysql
 
@@ -38,7 +38,7 @@ TOOL_FLAG = True
 API_FLAG = False
 # DEBUG模式是否开始的选择
 # 值为0：所有平台关闭DEBUG,值为1:所有平台开启DEBUG,值为其他：根据平台类型判断开启（默认设置的Windows下才开启）
-DEBUG = False
+DEBUG = debug_type
 
 
 ALLOWED_HOSTS = ['*']
@@ -90,7 +90,7 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-CKEDITOR_UPLOAD_PATH = '/www/wwwroot/www.nihonstudy.net/media/upload'
+CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR, 'media/upload')
 
 # 自定义用户model
 AUTH_USER_MODEL = 'oauth.Ouser'
@@ -197,12 +197,12 @@ USE_TZ = False  # 关闭国际时间，不然数据库报错
 # 静态文件收集
 STATIC_URL = '/static/'
 
-STATIC_ROOT = '/www/wwwroot/www.nihonstudy.net/static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [
-    '/www/wwwroot/www.nihonstudy.net/apps/blog/static',
-    '/www/wwwroot/www.nihonstudy.net/apps/comment/static',
-    '/www/wwwroot/www.nihonstudy.net/apps/tool/static'
+    os.path.join(BASE_DIR, 'apps/blog/static'),
+    os.path.join(BASE_DIR, 'apps/comment/static'),
+    os.path.join(BASE_DIR, 'apps/tool/static'),
     ]
 
 # 媒体文件收集
@@ -250,11 +250,11 @@ REST_FRAMEWORK = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 修改数据库为MySQL，并进行配置
-        'NAME': 'www_nihonstudy_n',       # 数据库的名称
-        'USER': 'root',        # 数据库的用户名
-        'PASSWORD': '2c590f59a74ba86c',  # 数据库的密码
-        'HOST': '127.0.0.1',
-        'PORT': 3306,
+        'NAME': data_config.get("DATANAME"),  # 数据库的名称
+        'USER': data_config.get("DATAUSER"),  # 数据库的用户名
+        'PASSWORD': data_config.get("DATAPASS"),  # 数据库的密码
+        'HOST': data_config.get("DATAHOST"),
+        'PORT': data_config.get("DATAPORT"),
         'OPTIONS': {'charset': 'utf8', }
     }
 }
