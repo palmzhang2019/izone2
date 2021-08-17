@@ -7,6 +7,7 @@ from django.db.models.aggregates import Count
 class ArticleSitemap(Sitemap):
     changefreq = 'daily'
     priority = 1.0
+    protocol = 'https'
 
     def items(self):
         return Article.objects.all()
@@ -17,6 +18,7 @@ class ArticleSitemap(Sitemap):
 class CategorySitemap(Sitemap):
     changefreq = 'weekly'
     priority = 0.8
+    protocol = 'https'
 
     def items(self):
         return Category.objects.annotate(total_num=Count('article')).filter(total_num__gt=0)
@@ -28,6 +30,7 @@ class CategorySitemap(Sitemap):
 class TagSitemap(Sitemap):
     changefreq = 'weekly'
     priority = 0.8
+    protocol = 'https'
 
     def items(self):
         return Tag.objects.annotate(total_num=Count('article')).filter(total_num__gt=0)
