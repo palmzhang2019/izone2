@@ -258,6 +258,6 @@ EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = 'your-webname <your-email@163.com>'
 
 # 网站默认设置和上下文信息
-SITE_END_TITLE = '网站的名称，如TendCode'
-SITE_DESCRIPTION = '网站描述'
-SITE_KEYWORDS = '网站关键词，多个词用英文逗号隔开'
+SITE_END_TITLE = '康老师教化学'
+SITE_DESCRIPTION = '康老师教化学'
+SITE_KEYWORDS = '初中化学,高中化学,化学学习,康老师教化学'
