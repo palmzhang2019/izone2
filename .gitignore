@@ -3,3 +3,6 @@ logs/
 .user.ini
 database_config.py
 .gitignore
+static
+*/migrations/
+whoosh_index/
