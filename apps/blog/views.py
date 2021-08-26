@@ -136,6 +136,17 @@ def AboutView(request):
     site_date = datetime.datetime.strptime('2018-04-12','%Y-%m-%d')
     return render(request, 'blog/about.html',context={'site_date':site_date})
 
+def PrivacyView(request):
+    return render(request, 'blog/privacy-policy.html')
+
+def DisclaimerView(request):
+    return render(request, 'blog/disclaimer.html')
+
+def ContactView(request):
+    return render(request, 'blog/contact.html')
+
+def DMCAtView(request):
+    return render(request, 'blog/dmca.html')
 
 class TimelineView(generic.ListView):
     model = Timeline

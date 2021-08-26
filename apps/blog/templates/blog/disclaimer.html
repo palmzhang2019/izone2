@@ -1,0 +1,39 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block head_title %}Copyrighted Contents，nihonstudy{% endblock %}
+{% block metas %}
+<meta name="description"
+      content="免责声明">
+<meta name="keywords" content="免责声明, 霓虹Study">
+{% endblock %}
+
+
+{% block base_content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8" style="line-height:2">
+            <div class="card rounded-0 border-0 p-3 f-16">
+                <div class="heateor_sss_sharing_container heateor_sss_horizontal_sharing" heateor-sss-data-href="/disclaimer/">
+                <h2 class="font-weight-bold">欢迎访问我站的隐私政策</h2>
+                    <p>
+                        如果您希望我从我的网站上删除某些受版权保护的评论，该怎么办？
+                    </p>
+                    <p>请注意，我们不在本网站上托管任何受版权保护的内容。 评论（文本）仅包含用户共享的信息，不包含可能以任何方式受版权保护的数据。 但是，如果内容的版权所有者要求，我会提供从我的网站删除评论的服务。 这些删除请求仅在以下情况下有效：</p>
+                    <ul>
+                        <li>您或您的公司是相关内容的版权所有者。</li>
+                        <li>您提供评论的确切 URL。</li>
+                        <li>您提供相关内容的完整名称。</li>
+                        <li>您使用可验证的电子邮件地址（例如 address@yourname/yourcompany.com）发送删除请求。</li>
+                    </ul>
+                    <p>如果您的请求符合所有这些规则，请发送邮件至 palmzhang19@gmail.com。 请保持通信礼貌。</p>
+                    <p>我会尽快删除帖子，通常在 4 天内。 请记住，我只能处理符合上述规则的删除请求。</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-4">
+            {% include 'blog/tags/base_right.html' %}
+        </div>
+    </div>
+</div>
+{% endblock %}
