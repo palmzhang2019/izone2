@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.conf.urls import url
 # from .views import goview
-from .views import (IndexView, DetailView, CategoryView, TagView, AboutView,
-                    SilianView, MySearchView, ArchiveView, TimelineView)
+from .views import (IndexView, DetailView, CategoryView, TagView, AboutView, ContactView, DMCAtView,
+                    SilianView, MySearchView, ArchiveView, TimelineView, PrivacyView, DisclaimerView)
 
 urlpatterns = [
     url(r'^$', IndexView.as_view(), name='index'),  # 主页，自然排序
@@ -14,6 +14,10 @@ urlpatterns = [
     url(r'^tag/(?P<slug>[\w-]+)/$', TagView.as_view(), name='tag'),
     url(r'^tag/(?P<slug>[\w-]+)/hot/$', TagView.as_view(), {'sort': 'v'}, name='tag_hot'),
     url(r'^about/$', AboutView, name='about'),  # About页面
+    url(r'^privacy-policy/$', PrivacyView, name='privacy'),  # privacy页面
+    url(r'^disclaimer/$', DisclaimerView, name='disclaimer'),  # disclaimer页面
+    url(r'^contact/$', ContactView, name='contact'),  # contact页面
+    url(r'^dmca/$', DMCAtView, name='dmca'),  # dmca页面
     url(r'^timeline/$', TimelineView.as_view(), name='timeline'),  # timeline页面
     url(r'archive/$', ArchiveView.as_view(), name='archive'),  # 归档页面
     url(r'^silian\.xml$', SilianView.as_view(content_type='application/xml'), name='silian'),  # 死链页面

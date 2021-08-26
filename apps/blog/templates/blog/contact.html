@@ -1,0 +1,34 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block head_title %}Copyrighted Contents，nihonstudy{% endblock %}
+{% block metas %}
+<meta name="description"
+      content="联系方式">
+<meta name="keywords" content="联系方式, 霓虹Study">
+{% endblock %}
+
+
+{% block base_content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8" style="line-height:2">
+            <div class="card rounded-0 border-0 p-3 f-16">
+                <div class="heateor_sss_sharing_container heateor_sss_horizontal_sharing" heateor-sss-data-href="/contact/">
+                <h4 class="font-weight-bold">网站名称：</h4>
+                <p>霓虹Study</p>
+                <h4 class="font-weight-bold">我的Email</h4>
+                <p><span>palmzhang19@gmail.com</span></p>
+                <h4 class="font-weight-bold">Subject</h4>
+                <p></p>
+                <h4 class="font-weight-bold">Your Message</h4>
+                <p></p>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-4">
+            {% include 'blog/tags/base_right.html' %}
+        </div>
+    </div>
+</div>
+{% endblock %}
