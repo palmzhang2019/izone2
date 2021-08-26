@@ -13,14 +13,10 @@
                 {% url 'blog:index' as index_url %}
                 <a class="nav-link py-md-3 {% if request.path == index_url %}active{% endif %}" href="{{ index_url }}"><i class="fa fa-home mr-1"></i>首页<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item mr-2">
-                {% url 'blog:archive' as archive_url %}
-                <a class="nav-link py-md-3 {% if request.path == archive_url %}active{% endif %}" href="{{ archive_url }}"><i class="fa fa-sitemap mr-1"></i>归档</a>
-            </li>
             {% if tool_flag %}
             <li class="nav-item mr-2">
                 {% url 'tool:total' as tool_url %}
-                <a class="nav-link py-md-3 {% if request.path == tool_url %}active{% endif %}" href="{{ tool_url }}"><i class="fa fa-balance-scale mr-1"></i>日语助手</a>
+                <a class="nav-link py-md-3 {% if request.path == tool_url %}active{% endif %}" href="{{ tool_url }}"><i class="fa fa-sliders mr-1"></i>日语助手</a>
             </li>
             {% endif %}
             {% if api_flag %}
@@ -31,6 +27,18 @@
             <li class="nav-item mr-2 ">
                 {% url 'blog:about' as about_url %}
                 <a class="nav-link py-md-3 {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}"><i class="fa fa-anchor mr-1"></i>关于</a>
+            </li>
+                        <li class="nav-item mr-2">
+                <a class="nav-link py-md-3" href=""><i class="fa fa-user-secret mr-1"></i>隐私政策</a>
+            </li>
+            <li class="nav-item mr-2">
+                <a class="nav-link py-md-3" href=""><i class="fa fa-shield mr-1"></i>免责申明</a>
+            </li>
+            <li class="nav-item mr-2">
+                <a class="nav-link py-md-3" href=""><i class="fa fa-phone mr-1"></i>联系方式</a>
+            </li>
+            <li class="nav-item mr-2">
+                <a class="nav-link py-md-3" href=""><i class="fa fa-life-ring mr-1"></i>DMCA</a>
             </li>
             <form class="nav-item navbar-form mr-2 py-md-2" role="search" method="get" id="searchform" action="{% url 'blog:search_view'%}">
                 <div class="input-group">
