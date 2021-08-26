@@ -1,3 +1,5 @@
+import datetime
+
 from django.shortcuts import render
 from django.views.decorators.http import require_POST
 from django.http import JsonResponse
@@ -22,6 +24,9 @@ def BD_pushview(request):
 
 def verb_deformed(request):
     return render(request, 'tool/verb_deformed.html')
+
+def exam_time(request):
+    return render(request, 'tool/exam_time.html')
 
 def adje_deformed(request):
     return render(request, 'tool/adje_deformed.html')
@@ -304,6 +309,11 @@ def adje_deformed_view(request):
     if deform_what == "8":
         return JsonResponse({'msg': jing_0_0(adje_d)})
     return JsonResponse({'msg': 'miss'})
+
+def exam_time_view(request):
+    today = datetime.date.today()
+    print(today)
+    pass
 
 def detect_adje(word):
     if word[-1] != "い":
