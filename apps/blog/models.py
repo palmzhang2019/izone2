@@ -224,3 +224,4 @@ class FriendLink(models.Model):
     def show_to_false(self):
         self.is_show = True
         self.save(update_fields=['is_show'])
+

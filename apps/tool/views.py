@@ -1,5 +1,6 @@
 import datetime
-
+from xml import etree
+import requests
 from django.shortcuts import render
 from django.views.decorators.http import require_POST
 from django.http import JsonResponse
@@ -10,6 +11,7 @@ from .apis.useragent import get_user_agent
 from .c_list import *
 import re
 import markdown
+from .models import ExamPlan
 
 
 # Create your views here.
@@ -26,7 +28,11 @@ def verb_deformed(request):
     return render(request, 'tool/verb_deformed.html')
 
 def exam_time(request):
-    return render(request, 'tool/exam_time.html')
+    # ExamPlan
+    site_date = datetime.datetime.strptime('2021-12-5', '%Y-%m-%d')
+    today = datetime.datetime.today()
+    interval_days = (site_date - today).days
+    return render(request, 'tool/exam_time.html', context={'interval_days':interval_days})
 
 def adje_deformed(request):
     return render(request, 'tool/adje_deformed.html')

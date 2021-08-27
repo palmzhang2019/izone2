@@ -31,3 +31,15 @@ class ToolLink(models.Model):
         return self.name
 
 
+class ExamPlan(models.Model):
+    name = models.CharField('考试名称', max_length=50)
+    examtime = models.DateField('考试日期')
+    create_date = models.DateTimeField('创建时间', auto_now_add=True)
+
+    class Meta:
+        verbose_name = '考试安排'
+        verbose_name_plural = verbose_name
+        ordering = ['create_date']
+
+    def __str__(self):
+        return self.name
