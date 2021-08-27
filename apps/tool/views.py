@@ -34,6 +34,9 @@ def exam_time(request):
     interval_days = (site_date - today).days
     return render(request, 'tool/exam_time.html', context={'interval_days':interval_days})
 
+def exam_remind(request):
+    return render(request, 'tool/exam_remind.html')
+
 def adje_deformed(request):
     return render(request, 'tool/adje_deformed.html')
 
