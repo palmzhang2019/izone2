@@ -31,9 +31,14 @@ class ToolLink(models.Model):
         return self.name
 
 
-class ExamPlan(models.Model):
+class Exam(models.Model):
+    objects = models.Manager()
     name = models.CharField('考试名称', max_length=50)
-    examtime = models.DateField('考试日期')
+    level = models.CharField('考试等级', max_length=50)
+    examtime = models.DateTimeField('考试日期')
+    regist_date = models.DateTimeField('注册时间')
+    signup_date = models.DateTimeField('报名时间')
+    print_date = models.DateTimeField('打印准考证时间')
     create_date = models.DateTimeField('创建时间', auto_now_add=True)
 
     class Meta:
@@ -43,3 +48,8 @@ class ExamPlan(models.Model):
 
     def __str__(self):
         return self.name
+
+class ExamRemind(models.Model):
+    user = models.CharField("用户", max_length=50)
+    email = models.CharField("邮箱地址", max_length=128)
+    which_exam = models.ForeignKey(Exam, related_name='remind_users', on_delete=models.CASCADE)

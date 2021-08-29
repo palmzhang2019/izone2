@@ -11,7 +11,8 @@ from .apis.useragent import get_user_agent
 from .c_list import *
 import re
 import markdown
-from .models import ExamPlan
+from .models import Exam, ExamRemind
+from django.contrib import messages
 
 
 # Create your views here.
@@ -319,11 +320,6 @@ def adje_deformed_view(request):
         return JsonResponse({'msg': jing_0_0(adje_d)})
     return JsonResponse({'msg': 'miss'})
 
-def exam_time_view(request):
-    today = datetime.date.today()
-    print(today)
-    pass
-
 def detect_adje(word):
     if word[-1] != "い":
         return 2
@@ -497,3 +493,20 @@ def useragent_api(request):
 # HTML特殊字符对照表
 def html_characters(request):
     return render(request, 'tool/characters.html')
+
+def exam_remind_view(request):
+    if request.is_ajax():
+        data = request.POST
+        email = data.get("verb_d")
+        level_what = data.get("deform_what")
+        which_exam = Exam.objects.get(id=level_what)
+        user = request.user.username
+        if not user:
+            return JsonResponse({'msg': 'no user'})
+        else:
+            obj = ExamRemind(
+                user = user,
+                email = email,
+                which_exam = which_exam)
+            obj.save()
+            return JsonResponse({'msg': 'success'})

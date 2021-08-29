@@ -53,6 +53,33 @@ function verb_deformed_api(CSRF, URL) {
 	})
 }
 
+function exam_remind_api(CSRF, URL) {
+	var verb_d = $('#email').val();
+	var deform_what = $('#deform_what').val();
+	if (verb_d.length === 0 || deform_what.length === 0) {
+		alert('email和考试等级不能为空！');
+		return false
+	}
+	$.ajaxSetup({
+		data: {
+			csrfmiddlewaretoken: CSRF
+		}
+	});
+	$('.push-result').html('<i class="fa fa-spinner fa-pulse fa-3x"></i>');
+	$.ajax({
+		type: 'post',
+		url: URL,
+		data: {
+			'verb_d': verb_d,
+			'deform_what': deform_what
+		},
+		dataType: 'json',
+		success: function(ret) {
+			$('.push-result').html(ret.msg);
+		},
+	})
+}
+
 function adje_deformed_api(CSRF, URL) {
 	var adje_d = $('#adje_d').val();
 	var deform_what = $('#deform_what').val();

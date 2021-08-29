@@ -7,21 +7,53 @@
     <meta name="keywords" content="日语考试提醒工具">
 {% endblock %}
 
-{% block tool_name %}日语动词在线变形工具{% endblock %}
+{% block tool_name %}日语考试提醒工具{% endblock %}
 {% block left_content %}
 <div class="card-body p-0">
-    <h1 class="card-title pl-2 title-info">日语考试倒计时 : <span>{{ interval_days }}</span> 天 </h1>
-    <p>
-        <ul>
-            <li>近期考试时间：2021年12月5日13:00。</li>
-            <li>日语考试提醒请访问：<a href="">考试提醒工具</a></li>
-        </ul>
-    </p>
+    <ul>
+        <li>
+            <p>Q: 这个网页是做什么的？</p>
+            <p>A: 本页面可以提醒用户注册个人信息，提醒报名，提醒打印准考证，提醒考试日期。</p>
+        </li>
+        <li>
+            <p>Q: 用户需要提供什么？</p>
+            <p>A: 用户需要登陆本网站，提供邮箱地址，和准备考试的科目。</p>
+        </li>
+    </ul>
+    <h3 class="card-title pl-2 title-info">
+        信息填写
+    </h3>
+    <div class="mb-3">
+        <div class="form-group">
+            <label>你的邮箱：</label>
+            <input type="url" class="form-control rounded-0" id="email"
+                   placeholder="test@example.com"
+                   required>
+        </div>
+        <div class="form-group">
+            <label>请选择考试的等级：</label>
+            <select name="" id="deform_what">
+                <option value="1">N 1</option>
+                <option value="2">N 2</option>
+                <option value="3">N 3</option>
+                <option value="3">N 4</option>
+                <option value="3">N 5</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-info btn-sm rounded-0" id="start-push">提交</button>
+        <div class="alert alert-success alert-dismissible" id="alert-success" style="display: none" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">x</button>
+            <strong>提交成功</strong>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
 {% block end_f %}
 <script>
-
+$('#start-push').click(function() {
+	exam_remind_api("{{ csrf_token }}", "{% url 'tool:exam_remind_api' %}");
+})
 </script>
 {% endblock %}
