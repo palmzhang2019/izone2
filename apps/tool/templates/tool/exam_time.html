@@ -1,22 +1,74 @@
 {% extends "tool/base_tool.html" %}
 {% load static %}
 
-{% block head_title %}日语考试倒计时,考试倒计时工具,日语能力考倒计时{% endblock %}
+{% block head_title %}日语考试倒计时,考试倒计时工具,日语考试复习计划{% endblock %}
 {% block metas %}
-    <meta name="description" content="日语考试倒计时,考试倒计时工具,日语能力考倒计时,日语N2考试倒计时,距离日语考试还有多少天">
-    <meta name="keywords" content="日语考试倒计时,考试倒计时工具,日语能力考倒计时,日语N2考试倒计时,距离日语考试还有多少天">
+    <meta name="description" content="日语考试倒计时,日语考试复习计划,日语能力考倒计时,日语N2考试倒计时,距离日语考试还有多少天">
+    <meta name="keywords" content="日语考试倒计时,日语考试复习计划,日语能力考倒计时,日语N2考试倒计时,距离日语考试还有多少天">
 {% endblock %}
 
-{% block tool_name %}日语考试倒计时{% endblock %}
+{% block tool_name %}日语考试倒计时_日语复习计划{% endblock %}
 {% block left_content %}
 <div class="card-body p-0">
     <h1 class="card-title pl-2 title-info">日语考试倒计时 : <span>{{ interval_days }}</span> 天 </h1>
-    <p>
+    <ul>
+        <li>近期考试时间：2021年12月5日13:00。</li>
+        <li>日语考试提醒请访问：<a href="">考试提醒工具</a></li>
+    </ul>
+    <h1 class="card-title pl-2 title-info">日语复习计划</h1>
+    <div>
+        {% if interval_days > 60 %}
+        <p>以N2考试为例</p>
+        <p>时间考试前5个月到考试前2个月,
+            建议这时候不要着急的做真题。应该以复习日语基础知识为主。建议做三件事,
+            <strong>听听力</strong>，<strong>背单词</strong>，<strong>练语法</strong></p>
+        <h4 class="card-title pl-2 title-info">听听力</h4>
         <ul>
-            <li>近期考试时间：2021年12月5日13:00。</li>
-            <li>日语考试提醒请访问：<a href="">考试提醒工具</a></li>
+            <li>不建议去看动漫和综艺节目，因为考试中的日语是生活和工作中常用的日语。动漫和综艺节目差距比较远。</li>
+            <li>听力的学习方法
+                <ul>
+                    <li>听比现有的知识水平略高一级的内容，原汁原味的素材。</li>
+                    <li>泛听与精听相结合
+                    <ul>
+                        <li>泛听主要听素材的背景，脉络，任务关系，主旨</li>
+                        <li>精听要尽量把素材的语言知识（单词，助词，句型）听出来</li>
+                    </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>推荐书籍：《新完全掌握听力》</li>
         </ul>
-    </p>
+        <h4 class="card-title pl-2 title-info">背单词</h4>
+        <ul>
+            <li>N4, N3, N2大约6800个单词，建议合理规划每天单词量，同时还要兼顾到当天复习的单词量。</li>
+            <li>建议使用一些手机APP对自己的单词进行管理</li>
+            <li>推荐手机应用软体《沪江开心词场》，《MoJi辞书》</li>
+        </ul>
+        <h4 class="card-title pl-2 title-info">练语法</h4>
+        <ul>
+            <li>语法学习的特点，语法是可以短时间内提高的，只要认真对待它。</li>
+            <li>语法学习对听力和阅读有很大的帮助。</li>
+            <li>如果基础比较薄弱，不建议直接上蓝宝书，建议从N4的语法点开始复习起。N4语法记得很熟的话就从N3开始。以此类推。</li>
+            <li>如果基础好的同学，可以直接上蓝宝书，然后刷题，刷三遍打底。学好语法有两个重点“大量”，“集中”</li>
+            <li>推荐书籍《蓝宝书》，《新完全掌握语法》</li>
+        </ul>
+        {% elif interval_days > 30 and interval_days < 60 %}
+        <p>
+            刷题
+        </p>
+        <ul>
+            <li>阶段性自我分析</li>
+            <li>错题及时分析总结</li>
+        </ul>
+        {% elif interval_days < 30 %}
+        <p>模拟考试</p>
+        <ul>
+            <li>适应新题型</li>
+            <li>提升解题速度</li>
+            <li>复习错题集</li>
+        </ul>
+        {% endif %}
+    </div>
 </div>
 {% endblock %}
 
