@@ -6,12 +6,11 @@
 {% block metas %}
     <meta name="description" content="{{ article.summary }}">
     <meta name="keywords" content="{% keywords_to_str article %}">
-    <meta property="twitter:url" content="/article/{{ article.slug }}">
-    <meta property="twitter:type" content="article">
-    <meta property="twitter:title" content="{{ article.title }}">
-    <meta property="twitter:description" content="{{ article.summary }}">
-    <meta property="twitter:image" content="{{ article.img_link }}">
-    <meta property="twitter:image:src" content="{{ article.img_link }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="{{ article.summary }}">
+    <meta name="twitter:image" content="{{ article.img_link }}">
+    <meta name="twitter:site" content="霓虹Study">
+    <meta name="twitter:title" content="{{ article.title }}">
 {% endblock %}
 
 
