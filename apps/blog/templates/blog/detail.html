@@ -46,16 +46,22 @@
                 {
                   "@context": "https://schema.org",
                   "@type": "BreadcrumbList",
-                  "itemListElement": [{
+                  "itemListElement": [
+                  {
                     "@type": "ListItem",
                     "position": 1,
+                    "name": "霓虹Study",
+                    "item": "https://nihonstudy.net/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
                     "name": "{{ article.category}}",
                     "item": "https://{{ request.get_host }}/category/{{ article.category.slug}}/"
                   },{
                     "@type": "ListItem",
-                    "position": 2,
-                    "name": "{{ article.title}}",
-                    "item": "https://{{ request.get_host }}/article/{{ article.slug }}/"
+                    "position": 3,
+                    "name": "{{ article.title}}"
                   }]
                 }
             </script>
