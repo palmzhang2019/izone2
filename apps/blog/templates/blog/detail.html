@@ -41,6 +41,24 @@
                     <li class="breadcrumb-item active d-md-none" aria-current="page">当前位置</li>
                 </ol>
             </nav>
+<!--            google的结构化数据面包屑导航-->
+            <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "{{ article.category}}",
+                    "item": "https://{{ request.get_host }}/category/{{ article.category.slug}}/"
+                  },{
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "{{ article.title}}",
+                    "item": "https://{{ request.get_host }}/article/{{ article.slug }}/"
+                  }]
+                }
+            </script>
             <div class="card rounded-0 border-0" id="article">
                 <div class="card-body px-2 px-md-3 pb-0">
                     <h1 class="card-title text-center font-weight-bold text-info">{{ article.title }}</h1>
