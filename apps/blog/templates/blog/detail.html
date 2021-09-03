@@ -7,10 +7,10 @@
     <meta name="description" content="{{ article.summary }}">
     <meta name="keywords" content="{% keywords_to_str article %}">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="{{ request.get_host }}{{ article.slug }}">
+    <meta name="twitter:url" content="https://{{ request.get_host }}/{{ article.slug }}">
     <meta name="twitter:title" content="{{ article.title }}">
     <meta name="twitter:description" content="{{ article.summary }}">
-    <meta name="twitter:image" content="{{ request.get_host }}{{ article.img_link }}">
+    <meta name="twitter:image" content="https://{{ request.get_host }}{{ article.img_link }}">
     <meta name="twitter:site" content="霓虹Study">
     <meta name="twitter:creator" content="PalmZhang">
 {% endblock %}
