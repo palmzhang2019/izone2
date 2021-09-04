@@ -49,6 +49,7 @@ urlpatterns = [
     url('', include('blog.urls', namespace='blog')),  # blog
     url(r'^comment/',include('comment.urls',namespace='comment')), # comment
     url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')), # robots
+    url(r'^ads\.txt$', TemplateView.as_view(template_name='ads.txt', content_type='text/plain')), # ads
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'), # 网站地图
     url(r'^feed/$', AllArticleRssFeed(), name='rss'),   # rss订阅
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # 加入这个才能显示media文件
