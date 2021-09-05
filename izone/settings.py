@@ -90,8 +90,6 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR, 'media/upload')
-
 # 自定义用户model
 AUTH_USER_MODEL = 'oauth.Ouser'
 
@@ -210,8 +208,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CKEDITOR_JQUERY_URL = 'https://cdn.bootcss.com/jquery/2.1.4/jquery.js'
-CKEDITOR_UPLOAD_PATH = "static/upload"
 CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR, 'media/upload')
 
 # 统一分页设置
 BASE_PAGE_BY = 10
@@ -271,5 +269,5 @@ DEFAULT_FROM_EMAIL = 'your-webname <your-email@163.com>'
 
 # 网站默认设置和上下文信息
 SITE_END_TITLE = '霓虹Study'
-SITE_DESCRIPTION = '本站专注于日语学习，站长本人也在学习日语，本站提供了日语中动词，形容词变换小工具。短期内怎么提高日语？怎么样练习日语口语？日语面试前需要准备什么？'
-SITE_KEYWORDS = '日语考试听力,日语动词变形,日语备考'
+SITE_DESCRIPTION = '本站专注于日语学习，站长本人也在学习日语，本站提供了日语中动词变形，形容词变形小工具，日语学习资料，日语听力资料，日语面试情景对话等内容'
+SITE_KEYWORDS = '日语学习资料,日语考试听力,日语动词变形,日语备考'
