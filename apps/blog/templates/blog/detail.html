@@ -2,7 +2,7 @@
 {% load blog_tags static comment_tags %}
 {% load humanize %}
 
-{% block head_title %}{{ article.title }}_{{ article.category }}{% endblock %}
+{% block head_title %}{{ article.title }}, {{ article.category }}{% endblock %}
 {% block metas %}
     <meta name="description" content="{{ article.summary }}">
     <meta name="keywords" content="{% keywords_to_str article %}">
