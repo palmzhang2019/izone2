@@ -13,6 +13,12 @@
     <meta name="twitter:image" content="https://{{ request.get_host }}{{ article.img_link }}">
     <meta name="twitter:site" content="霓虹Study">
     <meta name="twitter:creator" content="PalmZhang">
+
+    <meta property="og:url" content="https://{{ request.get_host }}/article/{{ article.slug }}"/>
+    <meta property="og:title" content="{{ article.title }}"/>
+    <meta property="og:description" content="{{ article.summary }}"/>
+    <meta property="og:image" content="https://{{ request.get_host }}{{ article.img_link }}"/>
+    <meta property="og:type" content="website"/>
 {% endblock %}
 
 
