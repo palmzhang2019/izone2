@@ -1,6 +1,6 @@
 {% extends 'blog/base.html' %}
 {% load static %}
-
+{% load i18n %}
 {% block head_title %}Copyrighted Contents，nihonstudy{% endblock %}
 {% block metas %}
 <meta name="description"
@@ -15,25 +15,25 @@
         <div class="col-lg-8" style="line-height:2">
             <div class="card rounded-0 border-0 p-3 f-16">
                 <div class="heateor_sss_sharing_container heateor_sss_horizontal_sharing" heateor-sss-data-href="/contact/">
-                <h2 class="font-weight-bold">数字千年版权法案政策 (DMCA)</h2>
-                <p>我的政策是对涉嫌侵犯版权的明确通知作出回应。 如果您认为我的一位用户侵犯了您的知识产权，我需要您向我们发送适当的通知。 所有通知均应符合 DMCA 的通知要求。 您必须提供以下信息：</p>
+                <h2 class="font-weight-bold">{% trans "数字千年版权法案政策" %} (DMCA)</h2>
+                <p>{% trans "我的政策是对涉嫌侵犯版权的明确通知作出回应。 如果您认为我的一位用户侵犯了您的知识产权，我需要您向我们发送适当的通知。 所有通知均应符合 DMCA 的通知要求。 您必须提供以下信息" %}：</p>
                 <ul>
-                    <li><span>标识为：</span>
+                    <li><span>{% trans "标识为" %}：</span>
                         <ul>
-                            <li>受版权保护的作品的所有者，或</li>
-                            <li>一个“被授权代表据称被侵犯的专有权的所有者行事的人”。</li>
+                            <li>{% trans "受版权保护的作品的所有者，或" %}</li>
+                            <li>{% trans "一个“被授权代表据称被侵犯的专有权的所有者行事的人”。" %}</li>
                         </ul>
                     </li>
-                    <li>确定声称被侵权的受版权保护的作品。</li>
-                    <li>通过向我提供侵权文件的确切位置和准确的nihontstudy.net 链接，确定声称侵权或成为侵权活动主题的材料以及将被删除或将被禁止访问的材料</li>
-                    <li>向我提供发布链接的网址。</li>
-                    <li>提供您的联系信息，包括您的全名、地址和电话号码。</li>
+                    <li>{% trans "确定声称被侵权的受版权保护的作品" %}。</li>
+                    <li>{% trans "通过向我提供侵权文件的确切位置和准确的nihontstudy.net 链接，确定声称侵权或成为侵权活动主题的材料以及将被删除或将被禁止访问的材料" %}</li>
+                    <li>{% trans "向我提供发布链接的网址" %}。</li>
+                    <li>{% trans "提供您的联系信息，包括您的全名、地址和电话号码" %}。</li>
                 </ul>
-                <p>（有关有效通知所需信息的更多详细信息，请参阅 17 U.S.C. 512(c)(3)。）</p>
-                <p>您应该知道，根据 DMCA，就版权侵权做出虚假陈述的索赔人可能要对因删除或屏蔽材料、法庭费用和律师费而造成的损害承担责任。</p>
-                <p>正确的通知必须包含上述信息，否则可能会被忽略。</p>
-                <p>发送通知至： palmzhang19@gmail.com</p>
-                <p>电子邮件回复最多需要 2 个工作日。 感谢您的理解。</p>
+                <p>（{% trans "有关有效通知所需信息的更多详细信息，请参阅" %} 17 U.S.C. 512(c)(3)。）</p>
+                <p>{% trans "您应该知道，根据 DMCA，就版权侵权做出虚假陈述的索赔人可能要对因删除或屏蔽材料、法庭费用和律师费而造成的损害承担责任" %}。</p>
+                <p>{% trans "正确的通知必须包含上述信息，否则可能会被忽略" %}。</p>
+                <p>{% trans "发送通知至" %}： palmzhang19@gmail.com</p>
+                <p>{% trans "电子邮件回复最多需要 2 个工作日。 感谢您的理解" %}。</p>
             </div>
         </div>
         </div>

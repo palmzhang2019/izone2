@@ -1,5 +1,6 @@
 {% load static %}
 {% load comment_tags %}
+{% load i18n %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -57,7 +58,7 @@
 
 <!--回到顶部按钮-->
 <div class="text-center" id="to-top">
-    <i class="fa fa-chevron-up" id="btn-top" title="回到顶部"></i>
+    <i class="fa fa-chevron-up" id="btn-top" title="{% trans '回到顶部' %}"></i>
 </div>
 
 <!--主要内容块-->
@@ -78,7 +79,7 @@ $(function(){var myElement=document.querySelector(".blog-navbar");var headroom=n
 {% if user.is_authenticated %}
 <script>
 var msgs = {% get_notifications_count user 'false' %};
-if(msgs>0){var _record=0;var myTitle=document.title;function titleBlink(){_record++;if(_record%2){document.title='【 】'+myTitle}else{document.title='【新消息】'+myTitle};setTimeout("titleBlink()",500)};titleBlink()}
+if(msgs>0){var _record=0;var myTitle=document.title;function titleBlink(){_record++;if(_record%2){document.title='【 】'+myTitle}else{document.title='【{% trans "新消息" %}】'+myTitle};setTimeout("titleBlink()",500)};titleBlink()}
 </script>
 {% endif %}
 {% block end_file %}{% endblock %}
@@ -88,8 +89,8 @@ if(msgs>0){var _record=0;var myTitle=document.title;function titleBlink(){_recor
             <span>Copyright&nbsp;&copy;&nbsp;2017-2018
             Hopetree.&nbsp;Powered&nbsp;by&nbsp;Django.</span>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span><small><a href="/privacy-policy"><i class="fa fa-user-secret mr-1"></i>隐私政策</a></small></span><span>  |  </span>
-            <span><small><a href="/disclaimer"><i class="fa fa-shield mr-1"></i>免责申明</a></small></span><span>  |  </span>
+            <span><small><a href="/privacy-policy"><i class="fa fa-user-secret mr-1"></i>{% trans "隐私政策" %}</a></small></span><span>  |  </span>
+            <span><small><a href="/disclaimer"><i class="fa fa-shield mr-1"></i>{% trans "免责申明" %}</a></small></span><span>  |  </span>
             <span><small><a href="/dmca"><i class="fa fa-life-ring mr-1"></i>DMCA</a></small></span>
         </p>
     </div>

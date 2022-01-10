@@ -126,18 +126,12 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-LANGUAGES = (
-    ('zh-hans', '简体中文'),
-    ('zh-hant', '繁体中文')
-)
 
 ROOT_URLCONF = 'izone.urls'
 
@@ -209,10 +203,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'apps/tool/static'),
     ]
 
-LOCALE_PATHS = (
-    os.path.join(BASE_DIR, 'locale'),
-)
-
 # 媒体文件收集
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -279,6 +269,6 @@ DEFAULT_FROM_EMAIL = 'your-webname <your-email@163.com>'
 
 # 网站默认设置和上下文信息
 SITE_END_TITLE = '霓虹Study'
-SITE_DESCRIPTION = '本站专注于日语学习，站长本人也在学习日语，本站提供了日语中动词变形，形容词变形小工具，日语学习资料，日语听力资料，日语面试情景对话等内容'
-SITE_KEYWORDS = '日语初学者,日语学习资料,日语考试听力,日语动词变形,日语备考'
-SITE_TITLE = '一个适合日语初学者的博客'
+SITE_DESCRIPTION = '本站專注於日語學習，站長本人也在學習日語，本站提供了日語中動詞變形，形容詞變形小工具，日語學習資料，日語聽力資料，日語面試情景對話等內容'
+SITE_KEYWORDS = '日語初學者,日語學習資料,日語考試聽力,日語動詞變形,日語備考'
+SITE_TITLE = '一個適合日語初學者的博客'

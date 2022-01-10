@@ -1,3 +1,4 @@
+import requests
 from django.shortcuts import get_object_or_404, render
 from django.utils.text import slugify
 from django.views import generic
@@ -42,7 +43,7 @@ class DetailView(generic.DetailView):
     model = Article
     template_name = 'blog/detail.html'
     context_object_name = 'article'
-
+    print(request.path)
     def get_object(self):
         obj = super(DetailView, self).get_object()
         # 设置浏览量增加时间判断,同一篇文章两次浏览超过半小时才重新统计阅览量,作者浏览忽略

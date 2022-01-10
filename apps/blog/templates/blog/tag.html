@@ -2,7 +2,7 @@
 {% load static %}
 {% load humanize %}
 {% load blog_tags %}
-
+{% load i18n %}
 {% block head_title %}{{ search_instance.name }}_{{ search_tag }}{% endblock %}
 {% block metas %}
 <meta name="description" content="{{ search_instance.description }}">
@@ -22,9 +22,9 @@
                 {% url 'blog:tag' search_instance.slug as base_tag %}
                 {% url 'blog:tag_hot' search_instance.slug as hot_tag %}
                 <a class="pb-2 {% if request.path == base_tag %}active{% endif %}" href="{{ base_tag }}">
-                    <i class="fa fa-bars mr-1"></i>时间排序</a>
+                    <i class="fa fa-bars mr-1"></i>{% trans "时间排序" %}</a>
                 <a class="pb-2 ml-4 {% if request.path == hot_tag %}active{% endif %}" href="{{ hot_tag }}">
-                    <i class="fa fa-fire mr-1"></i>热度排序</a>
+                    <i class="fa fa-fire mr-1"></i>{% trans "热度排序" %}</a>
             </div>
             {% load_article_summary articles %}
             {% if is_paginated %}{% load_pages %}{% endif %}

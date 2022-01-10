@@ -1,4 +1,5 @@
 {% load static oauth_tags comment_tags %}
+{% load i18n %}
 <nav class="navbar navbar-expand-md bg-white fixed-top blog-navbar py-md-0">
     <a class="navbar-brand d-md-none d-lg-block" href="{% url 'blog:index' %}">
         <img width="115" height="40" src="{% static 'blog/img/logo.png' %}" alt="{{ site_end_title }}">
@@ -11,12 +12,12 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item mr-2">
                 {% url 'blog:index' as index_url %}
-                <a class="nav-link py-md-3 {% if request.path == index_url %}active{% endif %}" href="{{ index_url }}"><i class="fa fa-home mr-1"></i>首页<span class="sr-only">(current)</span></a>
+                <a class="nav-link py-md-3 {% if request.path == index_url %}active{% endif %}" href="{{ index_url }}"><i class="fa fa-home mr-1"></i>{% trans "首页" %}<span class="sr-only">(current)</span></a>
             </li>
             {% if tool_flag %}
             <li class="nav-item mr-2">
                 {% url 'tool:total' as tool_url %}
-                <a class="nav-link py-md-3 {% if request.path == tool_url %}active{% endif %}" href="{{ tool_url }}"><i class="fa fa-sliders mr-1"></i>日语助手</a>
+                <a class="nav-link py-md-3 {% if request.path == tool_url %}active{% endif %}" href="{{ tool_url }}"><i class="fa fa-sliders mr-1"></i>{% trans "日语助手" %}</a>
             </li>
             {% endif %}
             {% if api_flag %}
@@ -26,14 +27,14 @@
             {% endif %}
             <li class="nav-item mr-2 ">
                 {% url 'blog:about' as about_url %}
-                <a class="nav-link py-md-3 {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}"><i class="fa fa-anchor mr-1"></i>关于</a>
+                <a class="nav-link py-md-3 {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}"><i class="fa fa-anchor mr-1"></i>{% trans "关于" %}</a>
             </li>
             <li class="nav-item mr-2">
-                <a class="nav-link py-md-3" href="/contact"><i class="fa fa-phone mr-1"></i>联系方式</a>
+                <a class="nav-link py-md-3" href="/contact"><i class="fa fa-phone mr-1"></i>{% trans "联系方式" %}</a>
             </li>
             <form class="nav-item navbar-form mr-2 py-md-2" role="search" method="get" id="searchform" action="{% url 'blog:search_view'%}">
                 <div class="input-group">
-                    <input type="search" name="q" class="form-control rounded-0 f-15" placeholder="搜索" required=True>
+                    <input type="search" name="q" class="form-control rounded-0 f-15" placeholder="{% trans '搜索' %}" required=True>
                     <div class="input-group-btn">
                         <button class="btn btn-info rounded-0" type="submit"><i class="fa fa-search"></i></button>
                     </div>
@@ -52,26 +53,26 @@
                     {% get_user_avatar_tag user %}
                 </a>
                 <div class="dropdown-menu dropdown-menu-right mt-0 rounded-0 border-0" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item pl-3" href="{% url 'oauth:profile' %}"><i class="fa fa-fw fa-user text-info mr-2"></i>个人资料</a>
+                    <a class="dropdown-item pl-3" href="{% url 'oauth:profile' %}"><i class="fa fa-fw fa-user text-info mr-2"></i>{% trans "个人资料" %}</a>
                     {% if user.is_staff %}
                     <a class="dropdown-item pl-3" href="{% url 'admin:index' %}"><i
-                            class="fa fa-fw fa-key text-info mr-2"></i>后台管理</a>
+                            class="fa fa-fw fa-key text-info mr-2"></i>{% trans "后台管理" %}</a>
                     {% endif %}
-                    <a class="dropdown-item pl-3" href="{% url 'comment:notification' %}"><i class="fa fa-fw fa-bell text-info mr-2"></i>消息
+                    <a class="dropdown-item pl-3" href="{% url 'comment:notification' %}"><i class="fa fa-fw fa-bell text-info mr-2"></i>{% trans "消息" %}
                         {% if msgnum > 0%}
                         <span class="badge badge-warning ml-3 text-center">{{ msgnum }}</span>
                         {% endif %}
                     </a>
                     <a class="dropdown-item pl-3" href="{% url 'account_logout' %}"><i
-                            class="fa fa-fw fa-sign-out text-info mr-2"></i>退出</a>
+                            class="fa fa-fw fa-sign-out text-info mr-2"></i>{% trans "退出" %}</a>
                 </div>
             </li>
             {% else %}
             <li class="nav-item mr-2">
-                <a class="nav-link py-md-3" href="{% url 'account_login' %}?next={{ request.path }}">登录</a>
+                <a class="nav-link py-md-3" href="{% url 'account_login' %}?next={{ request.path }}">{% trans "登录" %}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link py-md-3" href="{% url 'account_signup' %}?next={{ request.path }}">注册</a>
+                <a class="nav-link py-md-3" href="{% url 'account_signup' %}?next={{ request.path }}">{% trans "注册" %}</a>
             </li>
             {% endif %}
         </ul>

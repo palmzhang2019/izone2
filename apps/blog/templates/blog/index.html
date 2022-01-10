@@ -2,8 +2,8 @@
 {% load static %}
 {% load humanize %}
 {% load blog_tags %}
-
-{% block head_title %}一个适合日语初学者的博客{% endblock %}
+{% load i18n %}
+{% block head_title %}{{ site_title }}{% endblock %}
 {% block metas %}
     <meta name="description" content="{{ site_description }}">
     <meta name="keywords" content="{{ site_keywords }}">
@@ -16,15 +16,15 @@
 {
   "@context" : "http://schema.org",
   "@type" : "Article",
-  "name" : "一个适合日语初学者的博客, 霓虹Study",
+  "name" : "{{ site_title }}, {{ site_end_title }}",
   "author" : {
     "@type" : "Person",
     "name" : "Palm"
   },
   "datePublished" : "2021-08-22",
   "image" : "https://www.nihonstudy.net/static/upload/n2_listen_banner.png",
-  "articleSection" : [ "日语N2考试听力", "日语N5考试听力", "日语学习笔记", "日语求职面试", "日语考试听力原声", "日语面试工作经验", "日语面试常用短语", "日语面试对话" ],
-  "articleBody" : "本站专注于日语学习，站长本人也在学习日语，本站提供了日语中动词，形容词变换小工具。短期内怎么提高日语？怎么样练习日语口语？日语面试前需要准备什么？日语考试听力,日语动词变形,日语备考",
+  "articleSection" : [ "{% trans '日语N2考试听力' %}", "{% trans '日语N5考试听力' %}", "{% trans '日语学习笔记' %}", "{% trans '日语求职面试' %}", "{% trans '日语考试听力原声' %}", "{% trans '日语面试工作经验' %}", "{% trans '日语面试常用短语' %}", "{% trans '日语面试对话' %}" ],
+  "articleBody" : "{% trans '本站专注于日语学习，站长本人也在学习日语，本站提供了日语中动词，形容词变换小工具。短期内怎么提高日语？怎么样练习日语口语？日语面试前需要准备什么？日语考试听力,日语动词变形,日语备考' %}",
   "publisher" : {
     "@type" : "Organization",
     "name" : "霓虹Study"
@@ -39,9 +39,9 @@
                 {% url 'blog:index' as base_index %}
                 {% url 'blog:index_hot' as hot_index %}
                 <a class="pb-2 {% if request.path == base_index %}active{% endif %}" href="{{ base_index }}">
-                    <i class="fa fa-bars mr-1"></i>时间排序</a>
+                    <i class="fa fa-bars mr-1"></i>{% trans "时间排序" %}</a>
                 <a class="pb-2 ml-4 {% if request.path == hot_index %}active{% endif %}" href="{{ hot_index }}">
-                    <i class="fa fa-fire mr-1"></i>热度排序</a>
+                    <i class="fa fa-fire mr-1"></i>{% trans "热度排序" %}</a>
             </div>
             {% load_article_summary articles %}
             {% if is_paginated %}{% load_pages %}{% endif %}
