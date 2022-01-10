@@ -1,0 +1,1031 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-10 20:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\apps\blog\templates\blog\about.html:7
+msgid ""
+"本站专注于日语学习，站长本人也在学习日语，本站提供了日语中动词，形容词变换小"
+"工具。短期内怎么提高日语？怎么样练习日语口语？日语面试前需要准备什么？"
+msgstr ""
+"本站專注於日語學習，站長本人也在學習日語，本站提供了日語中動詞，形容詞變換小"
+"工具。短期內怎麼提高日語？怎麼樣練習日語口語？日語面試前需要準備什麼？"
+
+#: .\apps\blog\templates\blog\about.html:8
+msgid "网站About页面,关于网站,关于日语学习"
+msgstr "網站About頁面,關於網站,關於日語學習"
+
+#: .\apps\blog\templates\blog\about.html:20
+msgid "网站名称为"
+msgstr "網站名稱為"
+
+#: .\apps\blog\templates\blog\about.html:21
+msgid "网站的展示效果可以自适应于电脑PC、平板和手机"
+msgstr "網站的展示效果可以自適應於電腦PC、平板和手機"
+
+#: .\apps\blog\templates\blog\about.html:22
+msgid ""
+"博主在学习日语的过程中发现网络上大多数的帖子都是不带听力声音的，而带有听力声"
+"音的一般都是用视频的形式来制作的。所以博主就把声音和文字整理在一起，方便读者"
+"更专注于日语听力"
+msgstr ""
+"博主在學習日語的過程中發現網絡上大多數的帖子都是不帶聽力聲音的，而帶有聽力聲"
+"音的一般都是用視頻的形式來製作的。所以博主就把聲音和文字整理在一起，方便讀者"
+"更專注於日語聽力"
+
+#: .\apps\blog\templates\blog\about.html:24
+msgid "博主定位"
+msgstr "博主定位"
+
+#: .\apps\blog\templates\blog\about.html:27
+msgid ""
+"一名IT工程师，主要使用python,至今有6年的python开发经验，并且正在学习日语，并"
+"准备去日本工作"
+msgstr ""
+"一名IT工程師，主要使用python,至今有6年的python開發經驗，並且正在學習日語，並"
+"有去日本工作的想法"
+
+#: .\apps\blog\templates\blog\about.html:28
+msgid "联系邮箱"
+msgstr "聯繫Email"
+
+#: .\apps\blog\templates\blog\about.html:30
+msgid "网站功能"
+msgstr "網站功能"
+
+#: .\apps\blog\templates\blog\about.html:34
+msgid ""
+"网站目前有博客板块和工具板块，其中博客板块目前有N2听力、N5听力、日语求职面"
+"试、日语学习笔记，4个分类。工具板块目前有日语动词在线变换工具，这个工具可以解"
+"决初学者在学习日语动词时，查看日语动词变换结果和检查变换结果的正确性。后期还"
+"会再添加形容词变换工具"
+msgstr ""
+"網站目前有博客板塊和工具板塊，其中博客板塊目前有N2聽力、N5聽力、日語求職面"
+"試、日語學習筆記，4個分類。工具板塊目前有日語動詞在線變換工具，這個工具可以解"
+"決初學者在學習日語動詞時，查看日語動詞變換結果和檢查變換結果的正確性。後期還"
+"會再添加形容詞變換工具"
+
+#: .\apps\blog\templates\blog\about.html:36
+msgid "日语N2听力"
+msgstr "日語N2聽力"
+
+#: .\apps\blog\templates\blog\about.html:36
+msgid ""
+"部分主要收集了日语N2历年考试听力部分，包括N2听力题目，N2听力原文，N2听力声音"
+msgstr ""
+"部分主要收集了日語N2歷年考試聽力部分，包括N2聽力題目，N2聽力原文，N2聽力聲音"
+
+#: .\apps\blog\templates\blog\about.html:38
+msgid "日语N5听力"
+msgstr "日語N5聽力"
+
+#: .\apps\blog\templates\blog\about.html:38
+msgid ""
+"部分主要收集了日语N5历年考试听力部分，包括N5听力题目，N5听力原文，N5听力声音"
+msgstr ""
+"部分主要收集了日語N5歷年考試聽力部分，包括N5聽力題目，N5聽力原文，N5聽力聲音"
+
+#: .\apps\blog\templates\blog\about.html:40
+#: .\apps\blog\templates\blog\index.html:26
+msgid "日语求职面试"
+msgstr "日語求職面試"
+
+#: .\apps\blog\templates\blog\about.html:40
+msgid ""
+"部分模拟了日语面试时各个阶段的场景，以及在各场景中面试官的提问和求职者相应的"
+"问答。"
+msgstr ""
+"部分模擬了日語面試時各個階段的場景，以及在各場景中面試官的提問和求職者相應的"
+"問答。"
+
+#: .\apps\blog\templates\blog\about.html:42
+#: .\apps\blog\templates\blog\index.html:26
+msgid "日语学习笔记"
+msgstr "日語學習筆記"
+
+#: .\apps\blog\templates\blog\about.html:42
+msgid ""
+"部分是用来记录博主在日语学习的过程中遇到的语法，单词等问题。因为这些问题别人"
+"可能也会遇到，所以分享出来，希望能帮助到大家。"
+msgstr ""
+"部分是用來記錄博主在日語學習的過程中遇到的語法，單詞等問題。因為這些問題別人"
+"可能也會遇到，所以分享出來，希望能幫助到大家。"
+
+#: .\apps\blog\templates\blog\about.html:45
+msgid "网站支持"
+msgstr "網站支持"
+
+#: .\apps\blog\templates\blog\about.html:48
+msgid "感谢源码作者"
+msgstr "感謝源碼作者"
+
+#: .\apps\blog\templates\blog\about.html:48
+msgid "提供的支持"
+msgstr "提供的支持"
+
+#: .\apps\blog\templates\blog\about.html:49
+msgid "前端使用"
+msgstr "前端使用"
+
+#: .\apps\blog\templates\blog\about.html:49
+msgid "支持响应式；图标使用"
+msgstr "支持響應式；圖標使用"
+
+#: .\apps\blog\templates\blog\archive.html:7
+msgid "博客归档，浏览网站所有文章"
+msgstr "博客歸檔，瀏覽網站所有文章"
+
+#: .\apps\blog\templates\blog\archive.html:9
+msgid "博客归档，按照年份、月份对整站文章进行归档排序"
+msgstr "博客歸檔，按照年份、月份對整站文章進行歸檔排序"
+
+#: .\apps\blog\templates\blog\archive.html:10
+msgid "博客归档"
+msgstr "博客歸檔"
+
+#: .\apps\blog\templates\blog\base.html:61
+msgid "回到顶部"
+msgstr "回到頂部"
+
+#: .\apps\blog\templates\blog\base.html:82
+msgid "新消息"
+msgstr "新消息"
+
+#: .\apps\blog\templates\blog\base.html:92
+#: .\apps\blog\templates\blog\privacy-policy.html:7
+msgid "隐私政策"
+msgstr "隱私政策"
+
+#: .\apps\blog\templates\blog\base.html:93
+#: .\apps\blog\templates\blog\disclaimer.html:18
+msgid "免责申明"
+msgstr "免責聲明"
+
+#: .\apps\blog\templates\blog\category.html:25
+#: .\apps\blog\templates\blog\index.html:42
+#: .\apps\blog\templates\blog\tag.html:25
+msgid "时间排序"
+msgstr "時間排序"
+
+#: .\apps\blog\templates\blog\category.html:27
+#: .\apps\blog\templates\blog\index.html:44
+#: .\apps\blog\templates\blog\tag.html:27
+msgid "热度排序"
+msgstr "熱度排序"
+
+#: .\apps\blog\templates\blog\contact.html:7
+#: .\apps\blog\templates\blog\contact.html:8
+#: .\apps\blog\templates\blog\tags\navbar.html:33
+msgid "联系方式"
+msgstr "聯繫方式"
+
+#: .\apps\blog\templates\blog\contact.html:18
+msgid "网站名称"
+msgstr "網站名稱為"
+
+#: .\apps\blog\templates\blog\contact.html:22
+msgid "欢迎互相学习，讨论"
+msgstr "歡迎互相學習，討論"
+
+#: .\apps\blog\templates\blog\contact.html:25
+msgid "本站几乎所有的内容是站长手动搜集整理的"
+msgstr "本站幾乎所有的內容是站長手動蒐集整理的"
+
+#: .\apps\blog\templates\blog\contact.html:26
+msgid ""
+"是手动编辑的化就避免不了一些错误，如果有编辑错误，影响到了朋友们学习，作者在"
+"这里提前向朋友们说声抱歉"
+msgstr ""
+"是手動編輯的化就避免不了一些錯誤，如果有編輯錯誤，影響到了朋友們學習，作者在"
+"這裡提前向朋友們說聲抱歉"
+
+#: .\apps\blog\templates\blog\contact.html:27
+msgid "希望朋友们可以帮助我指出哪些地方出错了，作者后续会改正。"
+msgstr "希望朋友們可以幫助我指出哪些地方出錯了，作者後續會改正。"
+
+#: .\apps\blog\templates\blog\contact.html:28
+msgid "希望本站可以和大家一起成长，谢谢。"
+msgstr "希望本站可以和大家一起成長，謝謝。"
+
+#: .\apps\blog\templates\blog\detail.html:47
+msgid "当前位置"
+msgstr "當前位置"
+
+#: .\apps\blog\templates\blog\detail.html:80
+msgid "最后编辑于"
+msgstr "最後編輯於"
+
+#: .\apps\blog\templates\blog\detail.html:81
+msgid "阅读"
+msgstr "閱讀"
+
+#: .\apps\blog\templates\blog\detail.html:82
+msgid "评论"
+msgstr "評論"
+
+#: .\apps\blog\templates\blog\detail.html:88
+msgid "原创文章，转载请注明出处"
+msgstr "原創文章，轉載請註明出處"
+
+#: .\apps\blog\templates\blog\disclaimer.html:7
+#: .\apps\blog\templates\blog\disclaimer.html:8
+msgid "免责声明"
+msgstr "免責聲明"
+
+#: .\apps\blog\templates\blog\disclaimer.html:20
+msgid "如果您希望我从我的网站上删除某些受版权保护的评论，该怎么办"
+msgstr "如果您希望我從我的網站上刪除某些受版權保護的評論，該怎麼辦"
+
+#: .\apps\blog\templates\blog\disclaimer.html:22
+msgid ""
+"请注意，我们不在本网站上托管任何受版权保护的内容。 评论（文本）仅包含用户共享"
+"的信息，不包含可能以任何方式受版权保护的数据。 但是，如果内容的版权所有者要"
+"求，我会提供从我的网站删除评论的服务。 这些删除请求仅在以下情况下有效"
+msgstr ""
+"請注意，我們不在本網站上託管任何受版權保護的內容。評論（文本）僅包含用戶共享"
+"的信息，不包含可能以任何方式受版權保護的數據。但是，如果內容的版權所有者要"
+"求，我會提供從我的網站刪除評論的服務。這些刪除請求僅在以下情況下有效"
+
+#: .\apps\blog\templates\blog\disclaimer.html:24
+msgid "您或您的公司是相关内容的版权所有者"
+msgstr "您或您的公司是相關內容的版權所有者"
+
+#: .\apps\blog\templates\blog\disclaimer.html:25
+msgid "您提供评论的确切"
+msgstr "您提供評論的確切"
+
+#: .\apps\blog\templates\blog\disclaimer.html:26
+msgid "您提供相关内容的完整名称"
+msgstr "您提供相關內容的完整名稱"
+
+#: .\apps\blog\templates\blog\disclaimer.html:27
+msgid "您使用可验证的电子邮件地址"
+msgstr "您使用可驗證的電子郵件地址"
+
+#: .\apps\blog\templates\blog\disclaimer.html:27
+msgid "发送删除请求"
+msgstr "發送刪除請求"
+
+#: .\apps\blog\templates\blog\disclaimer.html:29
+msgid ""
+"如果您的请求符合所有这些规则，请发送邮件至 palmzhang19@gmail.com。 请保持通信"
+"礼貌"
+msgstr ""
+"如果您的請求符合所有這些規則，請發送郵件至 palmzhang19@gmail.com。請保持通信"
+"禮貌"
+
+#: .\apps\blog\templates\blog\disclaimer.html:30
+msgid ""
+"我会尽快删除帖子，通常在 4 天内。 请记住，我只能处理符合上述规则的删除请求。"
+msgstr ""
+"我會盡快刪除帖子，通常在 4 天內。請記住，我只能處理符合上述規則的刪除請求。"
+
+#: .\apps\blog\templates\blog\dmca.html:18
+msgid "数字千年版权法案政策"
+msgstr "數字千年版權法案政策"
+
+#: .\apps\blog\templates\blog\dmca.html:19
+msgid ""
+"我的政策是对涉嫌侵犯版权的明确通知作出回应。 如果您认为我的一位用户侵犯了您的"
+"知识产权，我需要您向我们发送适当的通知。 所有通知均应符合 DMCA 的通知要求。 "
+"您必须提供以下信息"
+msgstr ""
+"我的政策是對涉嫌侵犯版權的明確通知作出回應。如果您認為我的一位用戶侵犯了您的"
+"知識產權，我需要您向我們發送適當的通知。所有通知均應符合 DMCA 的通知要求。 您"
+"必須提供以下信息"
+
+#: .\apps\blog\templates\blog\dmca.html:21
+msgid "标识为"
+msgstr "標識為"
+
+#: .\apps\blog\templates\blog\dmca.html:23
+msgid "受版权保护的作品的所有者，或"
+msgstr "受版權保護的作品的所有者，或"
+
+#: .\apps\blog\templates\blog\dmca.html:24
+msgid "一个“被授权代表据称被侵犯的专有权的所有者行事的人”。"
+msgstr "一個“被授權代表據稱被侵犯的專有權的所有者行事的人”。"
+
+#: .\apps\blog\templates\blog\dmca.html:27
+msgid "确定声称被侵权的受版权保护的作品"
+msgstr "確定聲稱被侵權的受版權保護的作品"
+
+#: .\apps\blog\templates\blog\dmca.html:28
+msgid ""
+"通过向我提供侵权文件的确切位置和准确的nihontstudy.net 链接，确定声称侵权或成"
+"为侵权活动主题的材料以及将被删除或将被禁止访问的材料"
+msgstr ""
+"通過向我提供侵權文件的確切位置和準確的nihontstudy.net 鏈接，確定聲稱侵權或成"
+"為侵權活動主題的材料以及將被刪除或將被禁止訪問的材料"
+
+#: .\apps\blog\templates\blog\dmca.html:29
+msgid "向我提供发布链接的网址"
+msgstr "向我提供發布鏈接的網址"
+
+#: .\apps\blog\templates\blog\dmca.html:30
+msgid "提供您的联系信息，包括您的全名、地址和电话号码"
+msgstr "提供您的聯繫信息，包括您的全名、地址和電話號碼"
+
+#: .\apps\blog\templates\blog\dmca.html:32
+msgid "有关有效通知所需信息的更多详细信息，请参阅"
+msgstr "有關有效通知所需信息的更多詳細信息，請參閱"
+
+#: .\apps\blog\templates\blog\dmca.html:33
+msgid ""
+"您应该知道，根据 DMCA，就版权侵权做出虚假陈述的索赔人可能要对因删除或屏蔽材"
+"料、法庭费用和律师费而造成的损害承担责任"
+msgstr ""
+"您應該知道，根據 DMCA，就版權侵權做出虛假陳述的索賠人可能要對因刪除或屏蔽材"
+"料、法庭費用和律師費而造成的損害承擔責任"
+
+#: .\apps\blog\templates\blog\dmca.html:34
+msgid "正确的通知必须包含上述信息，否则可能会被忽略"
+msgstr "正確的通知必須包含上述信息，否則可能會被忽略"
+
+#: .\apps\blog\templates\blog\dmca.html:35
+msgid "发送通知至"
+msgstr "發送通知至"
+
+#: .\apps\blog\templates\blog\dmca.html:36
+msgid "电子邮件回复最多需要 2 个工作日。 感谢您的理解"
+msgstr "電子郵件回复最多需要 2 個工作日。感謝您的理解"
+
+#: .\apps\blog\templates\blog\index.html:26
+msgid "日语N2考试听力"
+msgstr "日語N2考試聽力"
+
+#: .\apps\blog\templates\blog\index.html:26
+msgid "日语N5考试听力"
+msgstr "日語N5考試聽力"
+
+#: .\apps\blog\templates\blog\index.html:26
+msgid "日语考试听力原声"
+msgstr "日語考試聽力原聲"
+
+#: .\apps\blog\templates\blog\index.html:26
+msgid "日语面试工作经验"
+msgstr "日語面試工作經驗"
+
+#: .\apps\blog\templates\blog\index.html:26
+msgid "日语面试常用短语"
+msgstr "日語面試常用短語"
+
+#: .\apps\blog\templates\blog\index.html:26
+msgid "日语面试对话"
+msgstr "日語面試對話"
+
+#: .\apps\blog\templates\blog\index.html:27
+msgid ""
+"本站专注于日语学习，站长本人也在学习日语，本站提供了日语中动词，形容词变换小"
+"工具。短期内怎么提高日语？怎么样练习日语口语？日语面试前需要准备什么？日语考"
+"试听力,日语动词变形,日语备考"
+msgstr ""
+"本站專注於日語學習，站長本人也在學習日語，本站提供了日語中動詞，形容詞變換小"
+"工具。短期內怎麼提高日語？怎麼樣練習日語口語？日語面試前需要準備什麼？日語考"
+"試聽力,日語動詞變形,日語備考"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:8
+#, fuzzy
+#| msgid "隐私政策"
+msgid "隐私政策, 霓虹Study"
+msgstr "隱私政策"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:19
+msgid "欢迎访问我站的隐私政策"
+msgstr "歡迎訪問我站的隱私政策"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:21
+msgid ""
+"编制本隐私政策是为了更好地服务那些关心如何在线使用他们的“个人身份信息”（PII）"
+"的人。 美国隐私法和信息安全中使用的 PII 是可以单独使用或与其他信息一起使用以"
+"识别、联系或定位单个人，或在上下文中识别个人的信息。 请仔细阅读我们的隐私政"
+"策，以清楚了解我们如何根据我们的网站收集、使用、保护或以其他方式处理您的个人"
+"身份信息。"
+msgstr ""
+"編制本隱私政策是為了更好地服務那些關心如何在線使用他們的“個人身份信息”（PII）"
+"的人。美國隱私法和信息安全中使用的 PII 是可以單獨使用或與其他信息一起使用以識"
+"別、聯繫或定位單個人，或在上下文中識別個人的信息。請仔細閱讀我們的隱私政策，"
+"以清楚了解我們如何根據我們的網站收集、使用、保護或以其他方式處理您的個人身份"
+"信息。"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:22
+msgid "我站收集哪些个人信息"
+msgstr "我站收集哪些個人信息"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:24
+msgid ""
+"在我们的网站上订购或注册时，您可能会被要求输入您的姓名、电子邮件地址、信用卡"
+"信息或其他详细信息，以帮助您获得体验。 您的卡信息通过第三方网关，例如 "
+"PayPal，这意味着您的详细信息是安全的，不会保存在我们的数据库中。"
+msgstr ""
+"在我們的網站上訂購或註冊時，您可能會被要求輸入您的姓名、電子郵件地址、信用卡"
+"信息或其他詳細信息，以幫助您獲得體驗。您的卡信息通過第三方網關，例如 PayPal，"
+"這意味著您的詳細信息是安全的，不會保存在我們的數據庫中。"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:25
+msgid "我站什么时候收集信息"
+msgstr "我站什麼時候收集信息"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:27
+msgid ""
+"当您在我们的网站上注册或在您的个人帐户面板中更改您的详细信息时，我们会从您那"
+"里收集所有必要的信息。"
+msgstr ""
+"當您在我們的網站上註冊或在您的個人帳戶面板中更改您的詳細信息時，我們會從您那"
+"裡收集所有必要的信息。"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:28
+msgid "我站怎么使用您的信息"
+msgstr "我站怎麼使用您的信息"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:30
+msgid ""
+"当您注册、购买、注册我们的时事通讯、回复调查或营销传播、浏览网站或通过以下方"
+"式使用某些其他网站功能时，我们可能会使用我们从您那里收集的信息"
+msgstr ""
+"當您註冊、購買、註冊我們的時事通訊、回複調查或營銷傳播、瀏覽網站或通過以下方"
+"式使用某些其他網站功能時，我們可能會使用我們從您那裡收集的信息"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:32
+msgid "快速处理您的交易"
+msgstr "快速處理您的交易"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:33
+msgid "定期发送有关您的订单或其他产品和服务的电子邮件"
+msgstr "定期發送有關您的訂單或其他產品和服務的電子郵件"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:35
+msgid "我站如何保护访客信息"
+msgstr "我站如何保護訪客信息"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:37
+msgid ""
+"我们会定期扫描我们的网站是否存在安全漏洞和已知漏洞，以使您对我们网站的访问尽"
+"可能安全"
+msgstr ""
+"我們會定期掃描我們的網站是否存在安全漏洞和已知漏洞，以使您對我們網站的訪問盡"
+"可能安全"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:40
+msgid "我们使用常规的恶意软件扫描"
+msgstr "我們使用常規的惡意軟體掃描"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:42
+msgid ""
+"您的个人信息包含在安全网络之后，只有少数对此类系统具有特殊访问权限的人才能访"
+"问，并且需要对信息保密。 此外，您提供的所有敏感/信用信息均通过安全套接字层 "
+"(SSL) 技术进行加密"
+msgstr ""
+"您的個人信息包含在安全網絡之後，只有少數對此類系統具有特殊訪問權限的人才能訪"
+"問，並且需要對信息保密。此外，您提供的所有敏感/信用信息均通過安全套接字層 "
+"(SSL) 技術進行加密"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:43
+msgid ""
+"当用户下订单输入、提交或访问他们的信息时，我们会实施各种安全措施，以维护您个"
+"人信息的安全"
+msgstr ""
+"當用戶下訂單輸入、提交或訪問他們的信息時，我們會實施各種安全措施，以維護您個"
+"人信息的安全"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:44
+msgid "所有交易均通过网关提供商处理，不会在我们的服务器上存储或处理"
+msgstr "所有交易均通過網關提供商處理，不會在我們的服務器上存儲或處理"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:45
+msgid "我站是否使用"
+msgstr "我站是否使用"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:46
+msgid "我们不使用 cookie 进行跟踪"
+msgstr "我們不使用 cookie 進行跟踪"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:48
+msgid ""
+"您可以选择在每次发送 cookie 时让您的计算机警告您，或者您可以选择关闭所有 "
+"cookie。 您可以通过浏览器（如 Internet Explorer）设置执行此操作。 每个浏览器"
+"都略有不同，因此请查看浏览器的“帮助”菜单以了解修改 cookie 的正确方法。"
+msgstr ""
+"您可以選擇在每次發送 cookie 時讓您的計算機警告您，或者您可以選擇關閉所有"
+"cookie。您可以通過瀏覽器（如 Internet Explorer）設置執行此操作。每個瀏覽器都"
+"略有不同，因此請查看瀏覽器的“幫助”菜單以了解修改 cookie 的正確方法。"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:49
+msgid ""
+"如果您禁用 cookie，某些功能将被禁用，从而使您的网站体验更高效，并且我们的某些"
+"服务将无法正常运行"
+msgstr ""
+"如果您禁用 cookie，某些功能將被禁用，從而使您的網站體驗更高效，並且我們的某些"
+"服務將無法正常運行"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:51
+msgid ""
+"我们与第三方供应商（例如 Google）一起使用第一方 cookie（例如 Google "
+"Analytics cookie）来衡量站点流量。"
+msgstr ""
+"我們與第三方供應商（例如 Google）一起使用第一方 cookie（例如 GoogleAnalytics "
+"cookie）來衡量站點流量。"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:52
+msgid "选择退出"
+msgstr "選擇退出"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:54
+msgid ""
+"用户可以使用 Google 广告设置页面设置 Google 如何向您投放广告的偏好设置。 或"
+"者，您可以通过访问网络广告计划退出页面或永久使用 Google Analytics 退出浏览器"
+"插件来退出。"
+msgstr ""
+"用戶可以使用 Google 廣告設置頁面設置 Google 如何向您投放廣告的偏好設置。或"
+"者，您可以通過訪問網絡廣告計劃退出頁面或永久使用 Google Analytics 退出瀏覽器"
+"插件來退出。"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:55
+msgid "站点如何处理不跟踪信号"
+msgstr "站點如何處理不跟踪信號"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:57
+msgid ""
+"我们尊重不跟踪信号，不跟踪、植入 cookie 或使用不跟踪 (DNT) 浏览器机制时的广告"
+msgstr ""
+"我們尊重不跟踪信號，不跟踪、植入 cookie 或使用不跟踪 (DNT) 瀏覽器機制時的廣告"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:58
+msgid "我站是否允许第三方行为跟踪"
+msgstr "我站是否允許第三方行為跟踪"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:59
+msgid "我们不允许第三方行为跟踪"
+msgstr "我們不允許第三方行為跟踪"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:60
+msgid "儿童在线隐私保护法"
+msgstr "兒童在線隱私保護法"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:61
+msgid ""
+"在收集 13 岁以下儿童的个人信息时，《儿童在线隐私保护法》(COPPA) 将父母置于控"
+"制之下。 美国消费者保护机构联邦贸易委员会执行 COPPA 规则，该规则阐明了网站和"
+"在线服务的运营商必须采取哪些措施来保护儿童的在线隐私和安全。"
+msgstr ""
+"在收集 13 歲以下兒童的個人信息時，《兒童在線隱私保護法》(COPPA) 將父母置於控"
+"制之下。美國消費者保護機構聯邦貿易委員會執行 COPPA 規則，該規則闡明了網站和在"
+"線服務的運營商必須採取哪些措施來保護兒童的在線隱私和安全。"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:62
+msgid "我们不会专门针对 13 岁以下的儿童进行营销。"
+msgstr "我們不會專門針對 13 歲以下的兒童進行營銷。"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:63
+msgid "我们收集您的电子邮件地址是为了"
+msgstr "我們收集您的電子郵件地址是為了"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:65
+msgid "发送信息、回复查询和/或其他请求或问题"
+msgstr "發送信息、回複查詢和/或其他請求或問題"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:66
+msgid "在原始交易发生后，向我们的邮件列表推销或继续向我们的客户发送电子邮件。"
+msgstr "在原始交易發生後，向我們的郵件列表推銷或繼續向我們的客戶發送電子郵件"
+
+#: .\apps\blog\templates\blog\privacy-policy.html:67
+msgid ""
+"隐私政策更新——我们保留随时修改本隐私政策的权利。 如果我们对本政策进行更改，我"
+"们可能会也可能不会通知您，因此您应该经常查看本隐私政策。如果对本隐私政策有任"
+"何疑问，请联系我们，您可以通过电子邮件与我们联系"
+msgstr ""
+"隱私政策更新——我們保留隨時修改本隱私政策的權利。如果我們對本政策進行更改，我"
+"們可能會也可能不會通知您，因此您應該經常查看本隱私政策。如果對本隱私政策有任"
+"何疑問，請聯繫我們，您可以通過電子郵件與我們聯繫"
+
+#: .\apps\blog\templates\blog\tags\article_list.html:24
+msgid "查看当前分类下更多文章"
+msgstr "查看當前分類下更多文章"
+
+#: .\apps\blog\templates\blog\tags\article_list.html:27
+msgid "查看文章评论"
+msgstr "查看文章評論"
+
+#: .\apps\blog\templates\blog\tags\article_list.html:33
+msgid "暂时没有文章"
+msgstr "暫時沒有文章"
+
+#: .\apps\blog\templates\blog\tags\base_right.html:10
+msgid "文章分类"
+msgstr "文章分類"
+
+#: .\apps\blog\templates\blog\tags\base_right.html:17
+msgid "查看"
+msgstr "查看"
+
+#: .\apps\blog\templates\blog\tags\base_right.html:17
+msgid "分类下所有文章"
+msgstr "分類下所有文章"
+
+#: .\apps\blog\templates\blog\tags\base_right.html:18
+msgid "当前分类下有"
+msgstr "當前分類下有"
+
+#: .\apps\blog\templates\blog\tags\base_right.html:27
+#: .\apps\blog\templates\blog\tags\navbar.html:20
+msgid "日语助手"
+msgstr "日語助手"
+
+#: .\apps\blog\templates\blog\tags\base_right.html:33
+msgid "日语动词在线变形工具"
+msgstr "日語動詞在線變形工具"
+
+#: .\apps\blog\templates\blog\tags\base_right.html:37
+msgid "日语形容词在线变形工具"
+msgstr "日語形容詞在線變形工具"
+
+#: .\apps\blog\templates\blog\tags\base_right.html:41
+msgid "日语考试倒计时"
+msgstr "日語考試倒計時"
+
+#: .\apps\blog\templates\blog\tags\base_right.html:49
+msgid "标"
+msgstr "標"
+
+#: .\apps\blog\templates\blog\tags\base_right.html:49
+msgid "签"
+msgstr "簽"
+
+#: .\apps\blog\templates\blog\tags\base_right.html:49
+msgid "云"
+msgstr "云"
+
+#: .\apps\blog\templates\blog\tags\base_right.html:56
+msgid "标签下有"
+msgstr "標籤下有"
+
+#: .\apps\blog\templates\blog\tags\base_right.html:66
+msgid "友情链接"
+msgstr "友情鏈接"
+
+#: .\apps\blog\templates\blog\tags\navbar.html:15
+msgid "首页"
+msgstr "首頁"
+
+#: .\apps\blog\templates\blog\tags\navbar.html:30
+msgid "关于"
+msgstr "關於"
+
+#: .\apps\blog\templates\blog\tags\navbar.html:37
+msgid "搜索"
+msgstr "搜索"
+
+#: .\apps\blog\templates\blog\tags\navbar.html:56
+msgid "个人资料"
+msgstr "個人資料"
+
+#: .\apps\blog\templates\blog\tags\navbar.html:59
+msgid "后台管理"
+msgstr "後台管理"
+
+#: .\apps\blog\templates\blog\tags\navbar.html:61
+msgid "消息"
+msgstr "新消息"
+
+#: .\apps\blog\templates\blog\tags\navbar.html:67
+msgid "退出"
+msgstr "退出"
+
+#: .\apps\blog\templates\blog\tags\navbar.html:72
+msgid "登录"
+msgstr "登錄"
+
+#: .\apps\blog\templates\blog\tags\navbar.html:75
+msgid "注册"
+msgstr "註冊"
+
+#: .\apps\blog\templates\blog\tags\pagecut.html:3
+#: .\apps\blog\templates\blog\tags\pagecut.html:5
+msgid "上一页"
+msgstr "上一頁"
+
+#: .\apps\blog\templates\blog\tags\pagecut.html:5
+msgid "当前页已经是首页"
+msgstr "當前頁已經是首頁"
+
+#: .\apps\blog\templates\blog\tags\pagecut.html:7
+msgid "页"
+msgstr "頁"
+
+#: .\apps\blog\templates\blog\tags\pagecut.html:9
+#: .\apps\blog\templates\blog\tags\pagecut.html:11
+msgid "下一页"
+msgstr "下一頁"
+
+#: .\templates\account\account_inactive.html:5
+#: .\templates\account\account_inactive.html:6
+msgid "Account Inactive"
+msgstr ""
+
+#: .\templates\account\account_inactive.html:9
+msgid "This account is inactive."
+msgstr "這個賬號未激活。"
+
+#: .\templates\account\email.html:6
+msgid "Account"
+msgstr "帳戶"
+
+#: .\templates\account\email.html:7
+msgid "E-mail Addresses"
+msgstr "電子郵件地址"
+
+#: .\templates\account\email.html:11
+msgid "The following e-mail addresses are associated with your account:"
+msgstr ""
+
+#: .\templates\account\email.html:25
+msgid "Verified"
+msgstr ""
+
+#: .\templates\account\email.html:27
+msgid "Unverified"
+msgstr ""
+
+#: .\templates\account\email.html:29
+msgid "Primary"
+msgstr ""
+
+#: .\templates\account\email.html:35
+msgid "Make Primary"
+msgstr ""
+
+#: .\templates\account\email.html:36
+msgid "Re-send Verification"
+msgstr ""
+
+#: .\templates\account\email.html:37
+msgid "Remove"
+msgstr ""
+
+#: .\templates\account\email.html:44
+msgid "Warning:"
+msgstr ""
+
+#: .\templates\account\email.html:44
+msgid ""
+"You currently do not have any e-mail address set up. You should really add "
+"an e-mail address so you can receive notifications, reset your password, etc."
+msgstr ""
+
+#: .\templates\account\email.html:49
+msgid "Add E-mail Address"
+msgstr ""
+
+#: .\templates\account\email.html:54
+msgid "Add E-mail"
+msgstr ""
+
+#: .\templates\account\email.html:63
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr ""
+
+#: .\templates\account\email\password_reset_key_message.txt:2
+#, python-format
+msgid ""
+"\n"
+"来自 %(site_name)s 的问候!\n"
+"\n"
+"您收到此电子邮件是因为您或其他人为您的用户帐户请求了密码重置。如果您未要求重"
+"置密码，则可以安全地忽略它。 若您需要重置密码，请点击下方的链接：\n"
+msgstr ""
+
+#: .\templates\account\email\password_reset_key_message.txt:9
+#, python-format
+msgid "In case you forgot, your username is %(username)s."
+msgstr ""
+
+#: .\templates\account\email\password_reset_key_message.txt:11
+#, python-format
+msgid ""
+"感谢你使用 %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+
+#: .\templates\account\email_confirm.html:6
+#: .\templates\account\email_confirm.html:7
+msgid "Confirm E-mail Address"
+msgstr ""
+
+#: .\templates\account\email_confirm.html:16
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
+"address for user %(user_display)s."
+msgstr ""
+
+#: .\templates\account\email_confirm.html:20
+msgid "Confirm"
+msgstr ""
+
+#: .\templates\account\email_confirm.html:27
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid. Please <a href=\"%"
+"(email_url)s\">issue a new e-mail confirmation request</a>."
+msgstr ""
+
+#: .\templates\account\login.html:8 .\templates\account\login.html:9
+#: .\templates\account\login.html:19
+msgid "Sign In"
+msgstr ""
+
+#: .\templates\account\login.html:18
+msgid "Forgot Password?"
+msgstr ""
+
+#: .\templates\account\logout.html:5 .\templates\account\logout.html:6
+#: .\templates\account\logout.html:16
+msgid "Sign Out"
+msgstr ""
+
+#: .\templates\account\logout.html:9
+msgid "Are you sure you want to sign out?"
+msgstr ""
+
+#: .\templates\account\password_change.html:6
+#: .\templates\account\password_change.html:7
+#: .\templates\account\password_change.html:13
+#: .\templates\account\password_reset_from_key.html:5
+#: .\templates\account\password_reset_from_key.html:6
+#: .\templates\account\password_reset_from_key_done.html:4
+#: .\templates\account\password_reset_from_key_done.html:5
+msgid "Change Password"
+msgstr ""
+
+#: .\templates\account\password_reset.html:7
+#: .\templates\account\password_reset.html:8
+#: .\templates\account\password_reset_done.html:6
+#: .\templates\account\password_reset_done.html:7
+msgid "Password Reset"
+msgstr ""
+
+#: .\templates\account\password_reset.html:16
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
+msgstr ""
+
+#: .\templates\account\password_reset.html:21
+msgid "Reset My Password"
+msgstr ""
+
+#: .\templates\account\password_reset.html:24
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr ""
+
+#: .\templates\account\password_reset_done.html:15
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+
+#: .\templates\account\password_reset_from_key.html:6
+msgid "Bad Token"
+msgstr ""
+
+#: .\templates\account\password_reset_from_key.html:11
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
+msgstr ""
+
+#: .\templates\account\password_reset_from_key.html:17
+msgid "change password"
+msgstr ""
+
+#: .\templates\account\password_reset_from_key.html:20
+#: .\templates\account\password_reset_from_key_done.html:8
+msgid "Your password is now changed."
+msgstr ""
+
+#: .\templates\account\password_set.html:6
+#: .\templates\account\password_set.html:7
+#: .\templates\account\password_set.html:13
+msgid "Set Password"
+msgstr ""
+
+#: .\templates\account\signup.html:6 .\templates\account\signup.html:8
+msgid "Signup"
+msgstr ""
+
+#: .\templates\account\signup.html:19
+msgid "Sign Up"
+msgstr ""
+
+#: .\templates\account\signup_closed.html:5
+#: .\templates\account\signup_closed.html:6
+msgid "Sign Up Closed"
+msgstr ""
+
+#: .\templates\account\signup_closed.html:9
+msgid "We are sorry, but the sign up is currently closed."
+msgstr ""
+
+#: .\templates\account\verification_sent.html:5
+#: .\templates\account\verification_sent.html:6
+#: .\templates\account\verified_email_required.html:5
+#: .\templates\account\verified_email_required.html:6
+msgid "Verify Your E-mail Address"
+msgstr ""
+
+#: .\templates\account\verification_sent.html:9
+msgid ""
+"We have sent an e-mail to you for verification. Follow the link provided to "
+"finalize the signup process. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+
+#: .\templates\account\verified_email_required.html:12
+msgid ""
+"This part of the site requires us to verify that\n"
+"you are who you claim to be. For this purpose, we require that you\n"
+"verify ownership of your e-mail address. "
+msgstr ""
+
+#: .\templates\account\verified_email_required.html:16
+msgid ""
+"We have sent an e-mail to you for\n"
+"verification. Please click on the link inside this e-mail. Please\n"
+"contact us if you do not receive it within a few minutes."
+msgstr ""
+
+#: .\templates\account\verified_email_required.html:20
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-"
+"mail address</a>."
+msgstr ""
+
+#: .\templates\admin\base.html:80 .\templates\admin\base.html:105
+#: .\templates\admin\base.html:108
+msgid "Django administration"
+msgstr ""
+
+#: .\templates\admin\base.html:127 .\templates\admin\base.html:142
+msgid "Documentation"
+msgstr ""
+
+#: .\templates\admin\base.html:132
+msgid "Change password"
+msgstr ""
+
+#: .\templates\admin\base.html:137 .\templates\admin\base.html:144
+msgid "Log out"
+msgstr ""
+
+#: .\templates\admin\base.html:153
+msgid "Home"
+msgstr ""
+
+#: .\templates\admin\base.html:163
+msgid "Close"
+msgstr ""
+
+#: .\templates\rest_framework\base.html:46
+msgid "navbar"
+msgstr ""
+
+#: .\templates\rest_framework\base.html:84
+msgid "content"
+msgstr ""
+
+#: .\templates\rest_framework\base.html:87
+msgid "request form"
+msgstr ""
+
+#: .\templates\rest_framework\base.html:143
+msgid "Filters"
+msgstr ""
+
+#: .\templates\rest_framework\base.html:148
+msgid "main content"
+msgstr ""
+
+#: .\templates\rest_framework\base.html:164
+msgid "request info"
+msgstr ""
+
+#: .\templates\rest_framework\base.html:168
+msgid "response info"
+msgstr ""
