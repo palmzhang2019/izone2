@@ -16,6 +16,7 @@ import platform
 from .database_config import *
 # 更换默认的数据库连接
 import pymysql
+from django.utils.translation import ugettext_lazy as _
 
 pymysql.install_as_MySQLdb()
 
@@ -78,7 +79,6 @@ INSTALLED_APPS = [
     'comment',  # 评论
     'ckeditor',
     'ckeditor_uploader'
-
 ]
 
 
@@ -278,7 +278,7 @@ EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = 'your-webname <your-email@163.com>'
 
 # 网站默认设置和上下文信息
-SITE_END_TITLE = '霓虹Study'
-SITE_DESCRIPTION = '本站专注于日语学习，站长本人也在学习日语，本站提供了日语中动词变形，形容词变形小工具，日语学习资料，日语听力资料，日语面试情景对话等内容'
-SITE_KEYWORDS = '日语初学者,日语学习资料,日语考试听力,日语动词变形,日语备考'
-SITE_TITLE = '一个适合日语初学者的博客'
+SITE_END_TITLE = _('霓虹Study')
+SITE_DESCRIPTION = _('本站专注于日语学习，站长本人也在学习日语，本站提供了日语中动词变形，形容词变形小工具，日语学习资料，日语听力资料，日语面试情景对话等内容')
+SITE_KEYWORDS = _('日语初学者,日语学习资料,日语考试听力,日语动词变形,日语备考')
+SITE_TITLE = _('一个适合日语初学者的博客')

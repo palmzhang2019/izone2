@@ -3,9 +3,8 @@ from django.shortcuts import get_object_or_404, render
 from django.utils.text import slugify
 from django.views import generic
 from django.conf import settings
-from .models import Article, Tag, Category, Timeline, Silian
+from .models import Article, Tag, Category, Timeline, Silian, ArticleHant, TagHant, CategoryHant
 from django.core.cache import cache
-
 from markdown.extensions.toc import TocExtension  # 锚点的拓展
 import markdown
 import time, datetime
@@ -32,6 +31,8 @@ class IndexView(generic.ListView):
     paginate_orphans = getattr(settings, 'BASE_ORPHANS', 0)
 
     def get_ordering(self):
+        if self.request.LANGUAGE_CODE == "zh-hant":
+            self.model = ArticleHant
         ordering = super(IndexView, self).get_ordering()
         sort = self.kwargs.get('sort')
         if sort == 'v':
@@ -43,8 +44,9 @@ class DetailView(generic.DetailView):
     model = Article
     template_name = 'blog/detail.html'
     context_object_name = 'article'
-    print(request.path)
     def get_object(self):
+        if self.request.LANGUAGE_CODE == "zh-hant":
+            self.model = ArticleHant
         obj = super(DetailView, self).get_object()
         # 设置浏览量增加时间判断,同一篇文章两次浏览超过半小时才重新统计阅览量,作者浏览忽略
         u = self.request.user
@@ -87,6 +89,8 @@ class CategoryView(generic.ListView):
     paginate_orphans = getattr(settings, 'BASE_ORPHANS', 0)
 
     def get_ordering(self):
+        if self.request.LANGUAGE_CODE == "zh-hant":
+            self.model = ArticleHant
         ordering = super(CategoryView, self).get_ordering()
         sort = self.kwargs.get('sort')
         if sort == 'v':
@@ -94,13 +98,21 @@ class CategoryView(generic.ListView):
         return ordering
 
     def get_queryset(self, **kwargs):
+        if self.request.LANGUAGE_CODE == "zh-hant":
+            self.model = ArticleHant
         queryset = super(CategoryView, self).get_queryset()
-        cate = get_object_or_404(Category, slug=self.kwargs.get('slug'))
+        if self.request.LANGUAGE_CODE == "zh-hant":
+            cate = get_object_or_404(CategoryHant, slug=self.kwargs.get('slug'))
+        else:
+            cate = get_object_or_404(Category, slug=self.kwargs.get('slug'))
         return queryset.filter(category=cate)
 
     def get_context_data(self, **kwargs):
+        if self.request.LANGUAGE_CODE == "zh-hant":
+            cate = get_object_or_404(CategoryHant, slug=self.kwargs.get('slug'))
+        else:
+            cate = get_object_or_404(Category, slug=self.kwargs.get('slug'))
         context_data = super(CategoryView, self).get_context_data()
-        cate = get_object_or_404(Category, slug=self.kwargs.get('slug'))
         context_data['search_tag'] = '文章分类'
         context_data['search_instance'] = cate
         return context_data
@@ -114,6 +126,8 @@ class TagView(generic.ListView):
     paginate_orphans = getattr(settings, 'BASE_ORPHANS', 0)
 
     def get_ordering(self):
+        if self.request.LANGUAGE_CODE == "zh-hant":
+            self.model = ArticleHant
         ordering = super(TagView, self).get_ordering()
         sort = self.kwargs.get('sort')
         if sort == 'v':
@@ -121,13 +135,21 @@ class TagView(generic.ListView):
         return ordering
 
     def get_queryset(self, **kwargs):
+        if self.request.LANGUAGE_CODE == "zh-hant":
+            self.model = ArticleHant
         queryset = super(TagView, self).get_queryset()
-        tag = get_object_or_404(Tag, slug=self.kwargs.get('slug'))
+        if self.request.LANGUAGE_CODE == "zh-hant":
+            tag = get_object_or_404(TagHant, slug=self.kwargs.get('slug'))
+        else:
+            tag = get_object_or_404(Tag, slug=self.kwargs.get('slug'))
         return queryset.filter(tags=tag)
 
     def get_context_data(self, **kwargs):
+        if self.request.LANGUAGE_CODE == "zh-hant":
+            tag = get_object_or_404(TagHant, slug=self.kwargs.get('slug'))
+        else:
+            tag = get_object_or_404(Tag, slug=self.kwargs.get("slug"))
         context_data = super(TagView, self).get_context_data()
-        tag = get_object_or_404(Tag, slug=self.kwargs.get('slug'))
         context_data['search_tag'] = '文章标签'
         context_data['search_instance'] = tag
         return context_data

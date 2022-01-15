@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-10 20:18+0800\n"
+"POT-Creation-Date: 2022-01-15 23:45+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,7 +100,7 @@ msgstr ""
 "部分主要收集了日語N5歷年考試聽力部分，包括N5聽力題目，N5聽力原文，N5聽力聲音"
 
 #: .\apps\blog\templates\blog\about.html:40
-#: .\apps\blog\templates\blog\index.html:26
+#: .\apps\blog\templates\blog\index.html:29
 msgid "日语求职面试"
 msgstr "日語求職面試"
 
@@ -113,7 +113,7 @@ msgstr ""
 "問答。"
 
 #: .\apps\blog\templates\blog\about.html:42
-#: .\apps\blog\templates\blog\index.html:26
+#: .\apps\blog\templates\blog\index.html:29
 msgid "日语学习笔记"
 msgstr "日語學習筆記"
 
@@ -176,13 +176,13 @@ msgid "免责申明"
 msgstr "免責聲明"
 
 #: .\apps\blog\templates\blog\category.html:25
-#: .\apps\blog\templates\blog\index.html:42
+#: .\apps\blog\templates\blog\index.html:45
 #: .\apps\blog\templates\blog\tag.html:25
 msgid "时间排序"
 msgstr "時間排序"
 
 #: .\apps\blog\templates\blog\category.html:27
-#: .\apps\blog\templates\blog\index.html:44
+#: .\apps\blog\templates\blog\index.html:47
 #: .\apps\blog\templates\blog\tag.html:27
 msgid "热度排序"
 msgstr "熱度排序"
@@ -364,31 +364,31 @@ msgstr "發送通知至"
 msgid "电子邮件回复最多需要 2 个工作日。 感谢您的理解"
 msgstr "電子郵件回复最多需要 2 個工作日。感謝您的理解"
 
-#: .\apps\blog\templates\blog\index.html:26
+#: .\apps\blog\templates\blog\index.html:29
 msgid "日语N2考试听力"
 msgstr "日語N2考試聽力"
 
-#: .\apps\blog\templates\blog\index.html:26
+#: .\apps\blog\templates\blog\index.html:29
 msgid "日语N5考试听力"
 msgstr "日語N5考試聽力"
 
-#: .\apps\blog\templates\blog\index.html:26
+#: .\apps\blog\templates\blog\index.html:29
 msgid "日语考试听力原声"
 msgstr "日語考試聽力原聲"
 
-#: .\apps\blog\templates\blog\index.html:26
+#: .\apps\blog\templates\blog\index.html:29
 msgid "日语面试工作经验"
 msgstr "日語面試工作經驗"
 
-#: .\apps\blog\templates\blog\index.html:26
+#: .\apps\blog\templates\blog\index.html:29
 msgid "日语面试常用短语"
 msgstr "日語面試常用短語"
 
-#: .\apps\blog\templates\blog\index.html:26
+#: .\apps\blog\templates\blog\index.html:29
 msgid "日语面试对话"
 msgstr "日語面試對話"
 
-#: .\apps\blog\templates\blog\index.html:27
+#: .\apps\blog\templates\blog\index.html:30
 msgid ""
 "本站专注于日语学习，站长本人也在学习日语，本站提供了日语中动词，形容词变换小"
 "工具。短期内怎么提高日语？怎么样练习日语口语？日语面试前需要准备什么？日语考"
@@ -399,10 +399,8 @@ msgstr ""
 "試聽力,日語動詞變形,日語備考"
 
 #: .\apps\blog\templates\blog\privacy-policy.html:8
-#, fuzzy
-#| msgid "隐私政策"
 msgid "隐私政策, 霓虹Study"
-msgstr "隱私政策"
+msgstr "隱私政策, 霓虹Study"
 
 #: .\apps\blog\templates\blog\privacy-policy.html:19
 msgid "欢迎访问我站的隐私政策"
@@ -628,52 +626,52 @@ msgstr "暫時沒有文章"
 msgid "文章分类"
 msgstr "文章分類"
 
-#: .\apps\blog\templates\blog\tags\base_right.html:17
+#: .\apps\blog\templates\blog\tags\base_right.html:21
 msgid "查看"
 msgstr "查看"
 
-#: .\apps\blog\templates\blog\tags\base_right.html:17
+#: .\apps\blog\templates\blog\tags\base_right.html:21
 msgid "分类下所有文章"
 msgstr "分類下所有文章"
 
-#: .\apps\blog\templates\blog\tags\base_right.html:18
+#: .\apps\blog\templates\blog\tags\base_right.html:22
 msgid "当前分类下有"
 msgstr "當前分類下有"
 
-#: .\apps\blog\templates\blog\tags\base_right.html:27
+#: .\apps\blog\templates\blog\tags\base_right.html:31
 #: .\apps\blog\templates\blog\tags\navbar.html:20
 msgid "日语助手"
 msgstr "日語助手"
 
-#: .\apps\blog\templates\blog\tags\base_right.html:33
+#: .\apps\blog\templates\blog\tags\base_right.html:37
 msgid "日语动词在线变形工具"
 msgstr "日語動詞在線變形工具"
 
-#: .\apps\blog\templates\blog\tags\base_right.html:37
+#: .\apps\blog\templates\blog\tags\base_right.html:41
 msgid "日语形容词在线变形工具"
 msgstr "日語形容詞在線變形工具"
 
-#: .\apps\blog\templates\blog\tags\base_right.html:41
+#: .\apps\blog\templates\blog\tags\base_right.html:45
 msgid "日语考试倒计时"
 msgstr "日語考試倒計時"
 
-#: .\apps\blog\templates\blog\tags\base_right.html:49
+#: .\apps\blog\templates\blog\tags\base_right.html:53
 msgid "标"
 msgstr "標"
 
-#: .\apps\blog\templates\blog\tags\base_right.html:49
+#: .\apps\blog\templates\blog\tags\base_right.html:53
 msgid "签"
 msgstr "簽"
 
-#: .\apps\blog\templates\blog\tags\base_right.html:49
+#: .\apps\blog\templates\blog\tags\base_right.html:53
 msgid "云"
 msgstr "云"
 
-#: .\apps\blog\templates\blog\tags\base_right.html:56
+#: .\apps\blog\templates\blog\tags\base_right.html:60
 msgid "标签下有"
 msgstr "標籤下有"
 
-#: .\apps\blog\templates\blog\tags\base_right.html:66
+#: .\apps\blog\templates\blog\tags\base_right.html:70
 msgid "友情链接"
 msgstr "友情鏈接"
 
@@ -713,23 +711,43 @@ msgstr "登錄"
 msgid "注册"
 msgstr "註冊"
 
-#: .\apps\blog\templates\blog\tags\pagecut.html:3
-#: .\apps\blog\templates\blog\tags\pagecut.html:5
+#: .\apps\blog\templates\blog\tags\pagecut.html:4
+#: .\apps\blog\templates\blog\tags\pagecut.html:6
 msgid "上一页"
 msgstr "上一頁"
 
-#: .\apps\blog\templates\blog\tags\pagecut.html:5
+#: .\apps\blog\templates\blog\tags\pagecut.html:6
 msgid "当前页已经是首页"
 msgstr "當前頁已經是首頁"
 
-#: .\apps\blog\templates\blog\tags\pagecut.html:7
+#: .\apps\blog\templates\blog\tags\pagecut.html:8
 msgid "页"
 msgstr "頁"
 
-#: .\apps\blog\templates\blog\tags\pagecut.html:9
-#: .\apps\blog\templates\blog\tags\pagecut.html:11
+#: .\apps\blog\templates\blog\tags\pagecut.html:10
+#: .\apps\blog\templates\blog\tags\pagecut.html:12
 msgid "下一页"
 msgstr "下一頁"
+
+#: .\izone\settings.py:291
+msgid "霓虹Study"
+msgstr "霓虹Study"
+
+#: .\izone\settings.py:292
+msgid ""
+"本站专注于日语学习，站长本人也在学习日语，本站提供了日语中动词变形，形容词变"
+"形小工具，日语学习资料，日语听力资料，日语面试情景对话等内容"
+msgstr ""
+"本站專注於日語學習，站長本人也在學習日語，本站提供了日語中動詞變形，形容詞變"
+"形小工具，日語學習資料，日語聽力資料，日語面試情景對話等內容"
+
+#: .\izone\settings.py:293
+msgid "日语初学者,日语学习资料,日语考试听力,日语动词变形,日语备考"
+msgstr "日語初學者,日語學習資料,日語考試聽力,日語動詞變形,日語備考"
+
+#: .\izone\settings.py:294
+msgid "一个适合日语初学者的博客"
+msgstr "一個適合日語初學者的博客"
 
 #: .\templates\account\account_inactive.html:5
 #: .\templates\account\account_inactive.html:6
