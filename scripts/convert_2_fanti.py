@@ -48,7 +48,7 @@ def concat_dict(columns, new_row):
     return new_dict
 
 def do():
-    table_list = ['blog_categoryfanti', 'blog_tagfanti', 'blog_keywordfanti', 'comment_articlefanticomment']
+    table_list = ['blog_categoryhant', 'blog_taghant', 'blog_keywordhant', 'comment_articlehantcomment']
     for table in table_list:
         update_sql(table)
 

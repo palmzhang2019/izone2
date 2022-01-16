@@ -110,3 +110,4 @@ static/
 .well-known
 izone/database_config.py
 .idea
+locale/*
