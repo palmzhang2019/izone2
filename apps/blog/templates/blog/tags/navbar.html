@@ -30,7 +30,8 @@
                 <a class="nav-link py-md-3 {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}"><i class="fa fa-anchor mr-1"></i>{% trans "关于" %}</a>
             </li>
             <li class="nav-item mr-2">
-                <a class="nav-link py-md-3" href="/contact"><i class="fa fa-phone mr-1"></i>{% trans "联系方式" %}</a>
+                {% url 'blog:contact' as contact_url %}
+                <a class="nav-link py-md-3 {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}"><i class="fa fa-phone mr-1"></i>{% trans "联系方式" %}</a>
             </li>
             <form class="nav-item navbar-form mr-2 py-md-2" role="search" method="get" id="searchform" action="{% url 'blog:search_view'%}">
                 <div class="input-group">

@@ -1,18 +1,16 @@
-{% load cache %}
 {% load blog_tags static %}
 {% load i18n %}
 <!--个人空间-->
-{% cache 1800 'cache_baseright_html_tag' %}
 
 <!--文章分类-->
 <div class="card border-0 rounded-0 px-3 mb-2 mb-md-3" id="category-card">
     <div class="card-header bg-white px-0">
         <strong><i class="fa fa-book mr-2 f-17"></i>{% trans "文章分类" %}</strong>
     </div>
-    {% if request.path == "/zh-hant/" %}
-    {% get_categoryhant_list as categories %}
+    {% if LANGUAGE_CODE == "zh-hant" %}
+        {% get_categoryhant_list as categories %}
     {% else %}
-    {% get_category_list as categories %}
+        {% get_category_list as categories %}
     {% endif %}
     <ul class="list-group list-group-flush f-16">
         {% for each in categories %}
@@ -54,7 +52,11 @@
     </div>
     <div class="card-body px-0 py-3">
         <div class="tag-cloud">
-            {% get_tag_list as tag_list %}
+            {% if LANGUAGE_CODE == "zh-hant" %}
+                {% get_taghant_list as tag_list %}
+            {% else %}
+                {% get_tag_list as tag_list %}
+            {% endif %}
             {% for tag in tag_list %}
             <a href="{{ tag.get_absolute_url }}" class="tags f-16" id="tag-{{ forloop.counter }}"
                title="【{{ tag.name }}】{% trans '标签下有' %}{{ tag.total_num }}篇文章">{{ tag.name }}</a>
@@ -84,4 +86,3 @@
         </div>
     </div>
 </div>
-{% endcache %}

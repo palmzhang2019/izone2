@@ -8,7 +8,7 @@ from django.core.cache import cache
 from markdown.extensions.toc import TocExtension  # 锚点的拓展
 import markdown
 import time, datetime
-
+from django.utils.translation import get_language
 from haystack.generic_views import SearchView  # 导入搜索视图
 from haystack.query import SearchQuerySet
 
@@ -31,13 +31,24 @@ class IndexView(generic.ListView):
     paginate_orphans = getattr(settings, 'BASE_ORPHANS', 0)
 
     def get_ordering(self):
-        if self.request.LANGUAGE_CODE == "zh-hant":
+        if get_language() == "zh-hant":
             self.model = ArticleHant
+        else:
+            self.model = Article
         ordering = super(IndexView, self).get_ordering()
         sort = self.kwargs.get('sort')
         if sort == 'v':
             return ('-views', '-update_date', '-id')
         return ordering
+
+    def get_queryset(self, **kwargs):
+        if get_language() == "zh-hant":
+            self.model = ArticleHant
+        else:
+            self.model = Article
+        queryset = super(IndexView, self).get_queryset()
+
+        return queryset
 
 
 class DetailView(generic.DetailView):
@@ -45,8 +56,10 @@ class DetailView(generic.DetailView):
     template_name = 'blog/detail.html'
     context_object_name = 'article'
     def get_object(self):
-        if self.request.LANGUAGE_CODE == "zh-hant":
+        if get_language() == "zh-hant":
             self.model = ArticleHant
+        else:
+            self.model = Article
         obj = super(DetailView, self).get_object()
         # 设置浏览量增加时间判断,同一篇文章两次浏览超过半小时才重新统计阅览量,作者浏览忽略
         u = self.request.user
@@ -89,8 +102,10 @@ class CategoryView(generic.ListView):
     paginate_orphans = getattr(settings, 'BASE_ORPHANS', 0)
 
     def get_ordering(self):
-        if self.request.LANGUAGE_CODE == "zh-hant":
+        if get_language() == "zh-hant":
             self.model = ArticleHant
+        else:
+            self.model = Article
         ordering = super(CategoryView, self).get_ordering()
         sort = self.kwargs.get('sort')
         if sort == 'v':
@@ -98,17 +113,19 @@ class CategoryView(generic.ListView):
         return ordering
 
     def get_queryset(self, **kwargs):
-        if self.request.LANGUAGE_CODE == "zh-hant":
+        if get_language() == "zh-hant":
             self.model = ArticleHant
+        else:
+            self.model = Article
         queryset = super(CategoryView, self).get_queryset()
-        if self.request.LANGUAGE_CODE == "zh-hant":
+        if get_language() == "zh-hant":
             cate = get_object_or_404(CategoryHant, slug=self.kwargs.get('slug'))
         else:
             cate = get_object_or_404(Category, slug=self.kwargs.get('slug'))
         return queryset.filter(category=cate)
 
     def get_context_data(self, **kwargs):
-        if self.request.LANGUAGE_CODE == "zh-hant":
+        if get_language() == "zh-hant":
             cate = get_object_or_404(CategoryHant, slug=self.kwargs.get('slug'))
         else:
             cate = get_object_or_404(Category, slug=self.kwargs.get('slug'))
@@ -126,8 +143,10 @@ class TagView(generic.ListView):
     paginate_orphans = getattr(settings, 'BASE_ORPHANS', 0)
 
     def get_ordering(self):
-        if self.request.LANGUAGE_CODE == "zh-hant":
+        if get_language() == "zh-hant":
             self.model = ArticleHant
+        else:
+            self.model = Article
         ordering = super(TagView, self).get_ordering()
         sort = self.kwargs.get('sort')
         if sort == 'v':
@@ -135,17 +154,19 @@ class TagView(generic.ListView):
         return ordering
 
     def get_queryset(self, **kwargs):
-        if self.request.LANGUAGE_CODE == "zh-hant":
+        if get_language() == "zh-hant":
             self.model = ArticleHant
+        else:
+            self.model = Article
         queryset = super(TagView, self).get_queryset()
-        if self.request.LANGUAGE_CODE == "zh-hant":
+        if get_language() == "zh-hant":
             tag = get_object_or_404(TagHant, slug=self.kwargs.get('slug'))
         else:
             tag = get_object_or_404(Tag, slug=self.kwargs.get('slug'))
         return queryset.filter(tags=tag)
 
     def get_context_data(self, **kwargs):
-        if self.request.LANGUAGE_CODE == "zh-hant":
+        if get_language() == "zh-hant":
             tag = get_object_or_404(TagHant, slug=self.kwargs.get('slug'))
         else:
             tag = get_object_or_404(Tag, slug=self.kwargs.get("slug"))

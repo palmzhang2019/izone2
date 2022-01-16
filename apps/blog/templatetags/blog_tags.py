@@ -33,6 +33,9 @@ def get_tag_list():
     '''返回标签列表'''
     return Tag.objects.annotate(total_num=Count('article')).filter(total_num__gt=0)
 
+@register.simple_tag
+def get_taghant_list():
+    return TagHant.objects.annotate(total_num=Count('articlehant')).filter(total_num__gt=0)
 
 @register.simple_tag
 def get_category_list():
