@@ -41,6 +41,22 @@
                     </div>
                 </div><!-- /input-group -->
             </form>
+            <li class="nav-item mr-2">
+                <a class="nav-link py-md-3">
+                    <form action="" method="post" id="change_language">
+                        {% csrf_token %}
+                        {% get_available_languages as LANGUAGES %}
+                        <select name="language" id="language" class="change_language" onchange="getLanSelect()">
+                            {% for lang in LANGUAGES %}
+                            <option value="{{ lang.0 }}" {% ifequal lang.0 LANGUAGE_CODE %} selected {% endifequal %}>
+                                {{ lang.1 }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </form>
+                </a>
+
+            </li>
         </ul>
         <ul class="navbar-nav">
             {% if user.is_authenticated %}
@@ -79,3 +95,20 @@
         </ul>
     </div>
 </nav>
+
+<script>
+    function getLanSelect(){
+        var myselect = document.getElementById("language")
+        var index = myselect.selectedIndex ;
+        selectedOption = myselect.options[index].value;
+
+        if (selectedOption == "zh-hant") {
+            var link = "/zh-hant" + window.location.pathname
+         }else{
+            var link = window.location.pathname.replace("/zh-hant", "")
+        }
+        window.open(link, "_self")
+
+    }
+
+</script>
