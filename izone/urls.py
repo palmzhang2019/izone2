@@ -44,7 +44,7 @@ sitemaps = {
 }
 
 urlpatterns = [
-    url(r'^adminx/', admin.site.urls),
+    url(r'adminx/', admin.site.urls),
     url('i18n/', include('django.conf.urls.i18n')),
     url(r'mdeditor/', include('mdeditor.urls')),
 ]
@@ -56,7 +56,7 @@ urlpatterns += i18n_patterns(
     url(r'^comment/', include('comment.urls', namespace='comment')),  # comment
     url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),  # robots
     url(r'^ads\.txt$', TemplateView.as_view(template_name='ads.txt', content_type='text/plain')),  # ads
-    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),  # 网站地图
+    url(r'sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),  # 网站地图
     url(r'^feed/$', AllArticleRssFeed(), name='rss'),  # rss订阅
     url(r'^tool/', include('tool.urls', namespace='tool')),
     prefix_default_language=False
