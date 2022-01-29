@@ -67,7 +67,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.weibo',
     'allauth.socialaccount.providers.github',
-
+    'mdeditor',
     'rest_framework',
 
     'crispy_forms',  # bootstrap表单样式
@@ -77,8 +77,6 @@ INSTALLED_APPS = [
     'blog',  # 博客应用
     'tool',  # 工具
     'comment',  # 评论
-    'ckeditor',
-    'ckeditor_uploader'
 ]
 
 
@@ -217,9 +215,9 @@ LOCALE_PATHS = (
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-CKEDITOR_JQUERY_URL = 'https://cdn.bootcss.com/jquery/2.1.4/jquery.js'
-CKEDITOR_IMAGE_BACKEND = "pillow"
-CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR, 'media/upload')
+# CKEDITOR_JQUERY_URL = 'https://cdn.bootcss.com/jquery/2.1.4/jquery.js'
+# CKEDITOR_IMAGE_BACKEND = "pillow"
+# CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR, 'media/upload')
 
 # 统一分页设置
 BASE_PAGE_BY = 10

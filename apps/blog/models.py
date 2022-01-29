@@ -1,12 +1,10 @@
 from django.db import models
 from django.conf import settings
 from django.shortcuts import reverse
+from mdeditor.fields import MDTextField
 import markdown
 import emoji
 import re
-from ckeditor.fields import RichTextField
-from ckeditor_uploader.fields import RichTextUploadingField
-from django.utils.translation import ugettext_lazy as _
 
 
 # Create your models here.
@@ -43,7 +41,7 @@ class Tag(models.Model):
         return reverse('blog:tag', kwargs={'slug': self.slug})
 
     def get_article_list(self):
-        '''返回当前标签下所有发表的文章列表'''
+        """返回当前标签下所有发表的文章列表"""
         return Article.objects.filter(tags=self)
 
 
@@ -75,7 +73,7 @@ class Article(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='作者')
     title = models.CharField(max_length=150, verbose_name='文章标题')
     summary = models.TextField('文章摘要', max_length=230, default='文章摘要等同于网页description内容，请务必填写...')
-    body = RichTextField(verbose_name='文章内容')
+    body = MDTextField(verbose_name='文章内容')
     img_link = models.CharField('图片地址', default=IMG_LINK, max_length=255)
     create_date = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     update_date = models.DateTimeField(verbose_name='修改时间', auto_now=True)
@@ -226,6 +224,7 @@ class FriendLink(models.Model):
         self.is_show = True
         self.save(update_fields=['is_show'])
 
+
 class CategoryHant(models.Model):
     name = models.CharField('文章分类', max_length=20)
     slug = models.SlugField(unique=True)
@@ -286,7 +285,7 @@ class ArticleHant(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='作者')
     title = models.CharField(max_length=150, verbose_name='文章标题')
     summary = models.TextField('文章摘要', max_length=230, default='文章摘要等同于网页description内容，请务必填写...')
-    body = RichTextField(verbose_name='文章内容')
+    body = MDTextField(verbose_name='文章内容')
     img_link = models.CharField('图片地址', default=IMG_LINK, max_length=255)
     create_date = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     update_date = models.DateTimeField(verbose_name='修改时间', auto_now=True)
@@ -324,3 +323,22 @@ class ArticleHant(models.Model):
 
     def get_next(self):
         return ArticleHant.objects.filter(id__gt=self.id).order_by('id').first()
+
+
+class AboutBlog(models.Model):
+    body = MDTextField(verbose_name='About 内容')
+    create_date = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
+    update_date = models.DateTimeField(verbose_name='修改时间', auto_now=True)
+
+    class Meta:
+        verbose_name = 'About'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return 'About'
+
+    def body_to_markdown(self):
+        return markdown.markdown(self.body, extensions=[
+            'markdown.extensions.extra',
+            'markdown.extensions.codehilite',
+        ])
