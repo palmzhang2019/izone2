@@ -4,15 +4,16 @@ import pymysql
 
 
 conn = pymysql.Connect(
-    host = data_config['DATAHOST'],
-    port = data_config['DATAPORT'],
-    user = data_config['DATAUSER'],
-    passwd = data_config['DATAPASS'],
-    db = data_config['DATANAME'],
+    host=data_config['DATAHOST'],
+    port=data_config['DATAPORT'],
+    user=data_config['DATAUSER'],
+    passwd=data_config['DATAPASS'],
+    db=data_config['DATANAME'],
     charset='utf8'
 )
 
 cur = conn.cursor()
+
 
 def update_sql(table_name):
     column_sql = "select COLUMN_NAME from information_schema.COLUMNS where table_name = '%s'" % table_name
@@ -41,16 +42,19 @@ def update_sql(table_name):
         cur.execute(update_state)
         conn.commit()
 
+
 def concat_dict(columns, new_row):
     new_dict = {}
     for i in zip(columns, new_row):
         new_dict[i[0]] = i[1]
     return new_dict
 
+
 def do():
     table_list = ['blog_categoryhant', 'blog_taghant', 'blog_keywordhant', 'comment_articlehantcomment']
     for table in table_list:
         update_sql(table)
+
 
 if __name__ == '__main__':
     do()
