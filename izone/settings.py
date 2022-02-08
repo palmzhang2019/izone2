@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 import sys
-import platform
 from .database_config import *
 # 更换默认的数据库连接
 import pymysql
@@ -40,7 +39,6 @@ API_FLAG = False
 # DEBUG模式是否开始的选择
 # 值为0：所有平台关闭DEBUG,值为1:所有平台开启DEBUG,值为其他：根据平台类型判断开启（默认设置的Windows下才开启）
 DEBUG = debug_type
-
 
 ALLOWED_HOSTS = ['*']
 
@@ -79,6 +77,12 @@ INSTALLED_APPS = [
     'comment',  # 评论
 ]
 
+GITHUB_AUTHORIZE_URL = 'https://github.com/login/oauth/authorize'
+GITHUB_CLIENTID = '6ead44cf4fa4d4fbbc1c'
+GITHUB_CLIENTSECRET = '7e65286e18072b2873a942fec72ee855ee227c07'
+
+# 这里是github认证处理的url,就是自己处理登陆逻辑(被坑好好久)
+GITHUB_CALLBACK = 'http://localhost:8000/accounts/github/'
 
 CKEDITOR_CONFIGS = {
     'default': {
@@ -205,7 +209,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'apps/blog/static'),
     os.path.join(BASE_DIR, 'apps/comment/static'),
     os.path.join(BASE_DIR, 'apps/tool/static'),
-    ]
+]
 
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
@@ -267,13 +271,13 @@ DATABASES = {
 
 # 邮箱配置
 EMAIL_HOST = 'smtp.163.com'
-EMAIL_HOST_USER = 'your-email@163.com'
-EMAIL_HOST_PASSWORD = 'your-password'  # 这个不是邮箱密码，而是授权码
+EMAIL_HOST_USER = 'palm0318@163.com'
+EMAIL_HOST_PASSWORD = 'LZBCWLGMAOTARKKV'  # 这个不是邮箱密码，而是授权码
 EMAIL_PORT = 465  # 由于阿里云的25端口打不开，所以必须使用SSL然后改用465端口
 # 是否使用了SSL 或者TLS，为了用465端口，要使用这个
 EMAIL_USE_SSL = True
 # 默认发件人，不设置的话django默认使用的webmaster@localhost，所以要设置成自己可用的邮箱
-DEFAULT_FROM_EMAIL = 'your-webname <your-email@163.com>'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # 网站默认设置和上下文信息
 SITE_END_TITLE = _('霓虹Study')

@@ -5,7 +5,7 @@ from imagekit.processors import ResizeToFill
 
 
 class Ouser(AbstractUser):
-    link = models.URLField('个人网址',blank=True,help_text='提示：网址必须填写以http开头的完整形式')
+    link = models.URLField('个人网址', blank=True, help_text='提示：网址必须填写以http开头的完整形式')
     avatar = ProcessedImageField(upload_to='avatar/%Y/%m/%d',
                                  default='avatar/default.png',
                                  verbose_name='头像',
@@ -19,3 +19,11 @@ class Ouser(AbstractUser):
 
     def __str__(self):
         return self.username
+
+
+class GithubUser(Ouser):
+    class Meta:
+        # 表名，与字段后台显示名
+        db_table = 'tb_oauth_github'
+        verbose_name = 'Github登录用户数据'
+        verbose_name_plural = verbose_name

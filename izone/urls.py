@@ -47,14 +47,15 @@ urlpatterns = [
     url(r'adminx/', admin.site.urls),
     url('i18n/', include('django.conf.urls.i18n')),
     url(r'mdeditor/', include('mdeditor.urls')),
+    url(r'^accounts/', include('allauth.urls')),  # allauth
+    url(r'^accounts/', include('oauth.urls', namespace='oauth')),  # oauth,只展现一个用户登录界面
+    url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),  # robots
+
 ]
 
 urlpatterns += i18n_patterns(
-    url(r'^accounts/', include('allauth.urls')),  # allauth
-    url(r'^accounts/', include('oauth.urls', namespace='oauth')),  # oauth,只展现一个用户登录界面
     url('', include('blog.urls', namespace='blog')),  # blog
     url(r'^comment/', include('comment.urls', namespace='comment')),  # comment
-    url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),  # robots
     url(r'^ads\.txt$', TemplateView.as_view(template_name='ads.txt', content_type='text/plain')),  # ads
     url(r'sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),  # 网站地图
     url(r'^feed/$', AllArticleRssFeed(), name='rss'),  # rss订阅
