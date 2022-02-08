@@ -50,7 +50,7 @@ urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),  # allauth
     url(r'^accounts/', include('oauth.urls', namespace='oauth')),  # oauth,只展现一个用户登录界面
     url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),  # robots
-
+    url('login/github/', include('social_django.urls', namespace='social')),
 ]
 
 urlpatterns += i18n_patterns(

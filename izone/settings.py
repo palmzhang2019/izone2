@@ -75,14 +75,9 @@ INSTALLED_APPS = [
     'blog',  # 博客应用
     'tool',  # 工具
     'comment',  # 评论
+    'social_django'
 ]
 
-GITHUB_AUTHORIZE_URL = 'https://github.com/login/oauth/authorize'
-GITHUB_CLIENTID = '6ead44cf4fa4d4fbbc1c'
-GITHUB_CLIENTSECRET = '7e65286e18072b2873a942fec72ee855ee227c07'
-
-# 这里是github认证处理的url,就是自己处理登陆逻辑(被坑好好久)
-GITHUB_CALLBACK = 'http://localhost:8000/accounts/github/'
 
 CKEDITOR_CONFIGS = {
     'default': {
@@ -102,7 +97,17 @@ AUTHENTICATION_BACKENDS = (
 
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
+    'social_core.backends.github.GithubOAuth2',
 )
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+# 填写Github中获取到的KEY和SECRET
+SOCIAL_AUTH_GITHUB_KEY = '6ead44cf4fa4d4fbbc1c'
+SOCIAL_AUTH_GITHUB_SECRET = '7e65286e18072b2873a942fec72ee855ee227c07'
+SOCIAL_AUTH_GITHUB_USE_OPENID_AS_USERNAME = True
+
+# 登陆成功后的回调路由
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'  # 登陆成功之后的路由
 
 # allauth需要的配置
 # 当出现"SocialApp matching query does not exist"这种报错的时候就需要更换这个ID
@@ -156,6 +161,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.i18n',
                 'blog.context_processors.settings_info',  # 自定义上下文管理器
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
