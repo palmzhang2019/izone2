@@ -65,6 +65,10 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.weibo',
     'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.weixin',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.twitter',
     'mdeditor',
     'rest_framework',
 
@@ -103,7 +107,7 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 2
 
 # 设置登录和注册成功后重定向的页面，默认是/accounts/profile/
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/accounts/profile/"
 
 # Email setting
 # imoprt from base_settings more infos

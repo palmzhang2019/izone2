@@ -25,8 +25,12 @@
                     </div>
                     <div class="login-link">
                         {% get_request_param request 'next' as next_url %}
-                        <a class="mx-4" href="/accounts/weibo/login/?next={{ next_url }}" title="社交账号登录有点慢，请耐心等候！"><i class="fa fa-weibo fa-2x"></i></a>
-                        <a class="mx-4" href="/accounts/github/login/?next={{ next_url }}" title="社交账号登录有点慢，请耐心等候！"><i class="fa fa-github fa-2x"></i></a>
+                        <a class="mx-2" href="/accounts/weibo/login/?next={{ next_url }}" title="微博登录"><i class="fa fa-weibo fa-2x"></i></a>
+                        <a class="mx-2" href="/accounts/github/login/?next={{ next_url }}" title="Github登录"><i class="fa fa-github fa-2x"></i></a>
+                        <a class="mx-2" href="/accounts/twitter/login/?next={{ next_url }}" title="twitter登录"><i class="fa fa-twitter-square fa-2x"></i></a>
+                        <a class="mx-2" href="/accounts/google/login/?next={{ next_url }}" title="Google登录"><i class="fa fa-google fa-2x"></i></a>
+                        <a class="mx-2" href="/accounts/facebook/login/?next={{ next_url }}" title="facebook登录"><i class="fa fa-facebook-square fa-2x"></i></a>
+                        <a class="mx-2" href="/accounts/weixin/login/?next={{ next_url }}" title="微信登录"><i class="fa fa-weixin fa-2x"></i></a>
                     </div>
                 </div>
             </div>

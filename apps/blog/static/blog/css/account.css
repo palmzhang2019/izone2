@@ -36,6 +36,41 @@
     color: #e12f11;
     opacity: .8;
 }
+.fa-google{
+    color: #eeb211;
+    opacity: .8;
+}
+.fa-google:hover{
+    opacity: 1;
+}
+.fa-twitter-square{
+    color: #00acee;
+    opacity: .8;
+}
+.fa-twitter-square:hover{
+    opacity: 1;
+}
+.fa-facebook-square{
+    color: #3b5998;
+    opacity: .8;
+}
+.fa-facebook-square:hover{
+    opacity: 1;
+}
+.fa-linkedin-square{
+    color: #0077b5;
+    opacity: .8;
+}
+.fa-linkedin-square:hover{
+    opacity: 1;
+}
+.fa-weixin{
+    color: #04BE02;
+    opacity: .8;
+}
+.fa-weixin:hover{
+    opacity: 1;
+}
 .fa-github {
     color: #333;
     opacity: .8;
