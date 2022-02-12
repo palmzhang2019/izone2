@@ -107,7 +107,7 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 2
 
 # 设置登录和注册成功后重定向的页面，默认是/accounts/profile/
-LOGIN_REDIRECT_URL = "/accounts/profile/"
+LOGIN_REDIRECT_URL = "/"
 
 # Email setting
 # imoprt from base_settings more infos
