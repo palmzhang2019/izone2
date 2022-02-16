@@ -107,7 +107,8 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 2
 
 # 设置登录和注册成功后重定向的页面，默认是/accounts/profile/
-LOGIN_REDIRECT_URL = "/"
+# LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/users/{id}/mytags"
 
 # Email setting
 # imoprt from base_settings more infos
@@ -115,8 +116,14 @@ LOGIN_REDIRECT_URL = "/"
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 # 登录方式，选择用户名或者邮箱都能登录
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"
+ACCOUNT_USERNAME_REQUIRED = False
 # 设置用户注册的时候必须填写邮箱地址
 ACCOUNT_EMAIL_REQUIRED = True
+SOCIALACCOUNT_QUERY_EMAIL = ACCOUNT_EMAIL_REQUIRED
+SOCIALACCOUNT_AUTO_SIGNUP = True
+SOCIALACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_ADAPTER = "izone.adapter.MyLoginAccountAdapter"
+LOGIN_URL = "/"
 # 登出直接退出，不用确认
 ACCOUNT_LOGOUT_ON_GET = True
 
