@@ -16,7 +16,6 @@ from .database_config import *
 # 更换默认的数据库连接
 import pymysql
 from django.utils.translation import ugettext_lazy as _
-
 pymysql.install_as_MySQLdb()
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -63,10 +62,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.weibo',
+    'allauth.socialaccount.providers.line',
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.weixin',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.twitter',
     'mdeditor',
@@ -81,6 +79,7 @@ INSTALLED_APPS = [
     'comment',  # 评论
 ]
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 CKEDITOR_CONFIGS = {
     'default': {
@@ -126,7 +125,6 @@ ACCOUNT_ADAPTER = "izone.adapter.MyLoginAccountAdapter"
 LOGIN_URL = "/"
 # 登出直接退出，不用确认
 ACCOUNT_LOGOUT_ON_GET = True
-
 # 表单插件的配置
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

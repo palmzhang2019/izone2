@@ -20,7 +20,7 @@ class ToolLink(models.Model):
     description = models.CharField('网站描述', max_length=100)
     link = models.URLField('网站链接')
     order_num = models.IntegerField('序号', default=99, help_text='序号可以用来调整顺序，越小越靠前')
-    category = models.ForeignKey(ToolCategory, verbose_name='网站分类',blank=True,null=True)
+    category = models.ForeignKey(ToolCategory, verbose_name='网站分类',blank=True,null=True, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = '推荐工具'

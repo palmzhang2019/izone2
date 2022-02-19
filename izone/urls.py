@@ -26,6 +26,7 @@ from rest_framework.routers import DefaultRouter
 from api import views as api_views
 from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls import include, url
+from django.urls import path
 
 if settings.API_FLAG:
     router = DefaultRouter()
@@ -44,26 +45,26 @@ sitemaps = {
 }
 
 urlpatterns = [
-    url(r'adminx/', admin.site.urls),
-    url(r'i18n/', include('django.conf.urls.i18n')),
-    url(r'mdeditor/', include('mdeditor.urls')),
-    url(r'^accounts/', include('allauth.urls')),  # allauth
-    url(r'^accounts/', include('oauth.urls', namespace='oauth')),  # oauth,只展现一个用户登录界面
-    url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),  # robots
+    path('adminx/', admin.site.urls),
+    path('i18n/', include('django.conf.urls.i18n')),
+    path('mdeditor/', include('mdeditor.urls')),
+    path('accounts/', include('allauth.urls')),  # allauth
+    path('accounts/', include(('oauth.urls', "oauth"), namespace='oauth')),  # oauth,只展现一个用户登录界面
+    path('robots\.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),  # robots
 ]
 
 urlpatterns += i18n_patterns(
-    url('', include('blog.urls', namespace='blog')),  # blog
-    url(r'^comment/', include('comment.urls', namespace='comment')),  # comment
-    url(r'^ads\.txt$', TemplateView.as_view(template_name='ads.txt', content_type='text/plain')),  # ads
-    url(r'sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),  # 网站地图
-    url(r'^feed/$', AllArticleRssFeed(), name='rss'),  # rss订阅
-    url(r'^tool/', include('tool.urls', namespace='tool')),
+    path('', include(('blog.urls', 'blog'), namespace='blog')),  # blog
+    path('comment/', include(('comment.urls', "comment"), namespace='comment')),  # comment
+    path('ads\.txt', TemplateView.as_view(template_name='ads.txt', content_type='text/plain')),  # ads
+    path('sitemap\.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),  # 网站地图
+    path('feed/', AllArticleRssFeed(), name='rss'),  # rss订阅
+    path('tool/', include(('tool.urls', "tool"), namespace='tool')),
     prefix_default_language=False
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # 加入这个才能显示media文件
 
 if settings.API_FLAG:
-    urlpatterns.append(url(r'^api/v1/', include(router.urls, namespace='api')))  # rest framework
+    urlpatterns.append(path('api/v1/', include(router.urls, namespace='api')))  # rest framework
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # if settings.TOOL_FLAG:

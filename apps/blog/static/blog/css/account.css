@@ -57,11 +57,11 @@
 .fa-facebook-square:hover{
     opacity: 1;
 }
-.fa-linkedin-square{
+.fa-linkedin{
     color: #0077b5;
     opacity: .8;
 }
-.fa-linkedin-square:hover{
+.fa-linkedin:hover{
     opacity: 1;
 }
 .fa-weixin{
@@ -71,12 +71,12 @@
 .fa-weixin:hover{
     opacity: 1;
 }
-.fa-github {
+.fa-github-square {
     color: #333;
     opacity: .8;
 }
 .fa-weibo:hover,
-.fa-github:hover {
+.fa-github-square:hover {
     opacity: 1;
 }
 .btn-sm {

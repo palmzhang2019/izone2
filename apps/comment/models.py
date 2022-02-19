@@ -7,12 +7,12 @@ import emoji
 
 
 class Comment(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='%(class)s_related', verbose_name='评论人')
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='%(class)s_related', verbose_name='评论人', on_delete=models.CASCADE)
     create_date = models.DateTimeField('创建时间', auto_now_add=True)
     content = models.TextField('评论内容')
     parent = models.ForeignKey('self', verbose_name='父评论', related_name='%(class)s_child_comments', blank=True,
-                               null=True)
-    rep_to = models.ForeignKey('self', verbose_name='回复', related_name='%(class)s_rep_comments', blank=True, null=True)
+                               null=True, on_delete=models.CASCADE)
+    rep_to = models.ForeignKey('self', verbose_name='回复', related_name='%(class)s_rep_comments', blank=True, null=True, on_delete=models.CASCADE)
 
     class Meta:
         '''这是一个元类，用来继承的'''
@@ -33,7 +33,7 @@ class Comment(models.Model):
         return to_md
 
 class ArticleComment(Comment):
-    belong = models.ForeignKey(Article, related_name='article_comments', verbose_name='所属文章')
+    belong = models.ForeignKey(Article, related_name='article_comments', verbose_name='所属文章', on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = '文章评论'
@@ -41,9 +41,9 @@ class ArticleComment(Comment):
         ordering = ['create_date']
 
 class Notification(models.Model):
-    create_p = models.ForeignKey(settings.AUTH_USER_MODEL,verbose_name='提示创建者',related_name='notification_create')
-    get_p = models.ForeignKey(settings.AUTH_USER_MODEL,verbose_name='提示接收者',related_name='notification_get')
-    comment = models.ForeignKey(ArticleComment,verbose_name='所属评论',related_name='the_comment')
+    create_p = models.ForeignKey(settings.AUTH_USER_MODEL,verbose_name='提示创建者',related_name='notification_create', on_delete=models.CASCADE)
+    get_p = models.ForeignKey(settings.AUTH_USER_MODEL,verbose_name='提示接收者',related_name='notification_get', on_delete=models.CASCADE)
+    comment = models.ForeignKey(ArticleComment,verbose_name='所属评论',related_name='the_comment', on_delete=models.CASCADE)
     create_date = models.DateTimeField('提示时间',auto_now_add=True)
     is_read = models.BooleanField('是否已读',default=False)
 
@@ -60,12 +60,12 @@ class Notification(models.Model):
         return '{}@了{}'.format(self.create_p,self.get_p)
 
 class CommentHant(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='%(class)s_related', verbose_name='评论人')
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='%(class)s_related', verbose_name='评论人', on_delete=models.CASCADE)
     create_date = models.DateTimeField('创建时间', auto_now_add=True)
     content = models.TextField('评论内容')
     parent = models.ForeignKey('self', verbose_name='父评论', related_name='%(class)s_child_comments', blank=True,
-                               null=True)
-    rep_to = models.ForeignKey('self', verbose_name='回复', related_name='%(class)s_rep_comments', blank=True, null=True)
+                               null=True, on_delete=models.CASCADE)
+    rep_to = models.ForeignKey('self', verbose_name='回复', related_name='%(class)s_rep_comments', blank=True, null=True, on_delete=models.CASCADE)
 
     class Meta:
         '''这是一个元类，用来继承的'''
@@ -86,7 +86,7 @@ class CommentHant(models.Model):
         return to_md
 
 class ArticleHantComment(CommentHant):
-    belong = models.ForeignKey(ArticleHant, related_name='article_comments', verbose_name='所属文章')
+    belong = models.ForeignKey(ArticleHant, related_name='article_comments', verbose_name='所属文章', on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = '文章评论'
