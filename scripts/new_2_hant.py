@@ -39,7 +39,7 @@ def exec_cate():
             try:
                 cur.execute(insert_sql)
                 conn.commit()
-                print("cate成功")
+                print("cate success")
             except:
                 conn.rollback()
 
@@ -69,7 +69,7 @@ def exec_tag():
             try:
                 cur.execute(insert_sql)
                 conn.commit()
-                print("tag成功")
+                print("tag success")
             except:
                 conn.rollback()
 
@@ -99,7 +99,7 @@ def exec_keyword():
             try:
                 cur.execute(insert_sql)
                 conn.commit()
-                print("keyword成功")
+                print("keyword success")
             except:
                 conn.rollback()
 
@@ -132,7 +132,7 @@ def exec_article():
             try:
                 cur.execute(insert_sql)
                 conn.commit()
-                print("article更新成功")
+                print("article update success")
             except:
                 conn.rollback()
 
