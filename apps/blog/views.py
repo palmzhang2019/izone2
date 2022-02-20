@@ -89,6 +89,10 @@ class DetailView(generic.DetailView):
                 'markdown.extensions.codehilite',
                 'markdown.extensions.toc',
             ])
+        print("111"*8)
+        print(md)
+        print("111"*8)
+
         obj.body = md.convert(obj.body)
         obj.toc = md.toc
         cache.set(md_key, (obj.body, obj.toc), 60 * 60 * 12)
