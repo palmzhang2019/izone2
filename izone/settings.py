@@ -62,11 +62,11 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.line',
+    # 'allauth.socialaccount.providers.line',
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.twitter',
+    # 'allauth.socialaccount.providers.facebook',
+    # 'allauth.socialaccount.providers.twitter',
     'mdeditor',
     'rest_framework',
 
@@ -122,6 +122,7 @@ SOCIALACCOUNT_QUERY_EMAIL = ACCOUNT_EMAIL_REQUIRED
 SOCIALACCOUNT_AUTO_SIGNUP = True
 SOCIALACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_ADAPTER = "izone.adapter.MyLoginAccountAdapter"
+SOCIALACCOUNT_ADAPTER = "izone.adapter.MySocialAccountAdapter"
 LOGIN_URL = "/"
 # 登出直接退出，不用确认
 ACCOUNT_LOGOUT_ON_GET = True
