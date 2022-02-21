@@ -83,6 +83,7 @@ class DetailView(generic.DetailView):
         cache_md = cache.get(md_key)
         if cache_md:
             md = cache_md
+            cache.set(md_key, md, 60 * 60 * 12)
         else:
             md = markdown.Markdown(extensions=[
                 'markdown.extensions.extra',
