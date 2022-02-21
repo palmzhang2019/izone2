@@ -89,8 +89,10 @@ class DetailView(generic.DetailView):
                 'markdown.extensions.codehilite',
                 'markdown.extensions.toc',
             ])
-
-        obj.body = md.convert(obj.body)
+        if isinstance(md, tuple):
+            obj.body = md[0].convert(obj.body)
+        else:
+            obj.body = md.convert(obj.body)
         obj.toc = md.toc
         cache.set(md_key, (obj.body, obj.toc), 60 * 60 * 12)
         return obj
