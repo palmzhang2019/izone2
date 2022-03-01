@@ -17,11 +17,11 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib import admin
 from django.views.generic import TemplateView
-
+from django.views.generic.base import RedirectView
 from django.contrib.sitemaps.views import sitemap
 from blog.sitemaps import ArticleSitemap, CategorySitemap, TagSitemap
 from blog.feeds import AllArticleRssFeed
-
+from django.contrib.staticfiles.storage import staticfiles_storage
 from rest_framework.routers import DefaultRouter
 from api import views as api_views
 from django.conf.urls.i18n import i18n_patterns
@@ -50,7 +50,8 @@ urlpatterns = [
     path('mdeditor/', include('mdeditor.urls')),
     path('accounts/', include('allauth.urls')),  # allauth
     path('accounts/', include(('oauth.urls', "oauth"), namespace='oauth')),  # oauth,只展现一个用户登录界面
-    path('robots\.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),  # robots
+    path('robots.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),  # robots
+    path('ads.txt', TemplateView.as_view(template_name='ads.txt', content_type='text/plain'))
 ]
 
 urlpatterns += i18n_patterns(
