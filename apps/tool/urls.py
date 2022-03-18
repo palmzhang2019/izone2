@@ -2,7 +2,7 @@
 from django.conf.urls import url
 from .views import (Toolview, BD_pushview, bd_api_view, BD_pushview_site, bd_api_site, Link_testview,exam_remind_view,
                     Link_test_api, regexview, regex_api, useragent_view, useragent_api, html_characters, exam_time,
-                    verb_deformed, verb_deformed_view, adje_deformed, adje_deformed_view, exam_remind)
+                    verb_deformed, verb_deformed_view, adje_deformed, adje_deformed_view, exam_remind, interview_dialogue_view)
 
 urlpatterns = [
     url(r'^$', Toolview, name='total'),  # 工具汇总页
@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^verb_deformed_python/$', verb_deformed_view, name='verb_deformed_api'),
     url(r'^adje_deformed/$', adje_deformed, name='adje_deformed'),  # 形容词变换
     url(r'^adje_deformed_python/$', adje_deformed_view, name='adje_deformed_api'),
+    url(r'^interview_dialogue/$', interview_dialogue_view, name='interview_dialogue'),
     url(r'^baidu-linksubmit/ajax/$', bd_api_view, name='baidu_push_api'),  # 百度推送ajax
     url(r'^baidu-linksubmit-for-sitemap/$', BD_pushview_site, name='baidu_push_site'),  # 百度主动推送sitemap
     url(r'^baidu-linksubmit-for-sitemap/ajax/$', bd_api_site, name='baidu_push_api_site'),

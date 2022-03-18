@@ -30,7 +30,7 @@ def verb_deformed(request):
 
 def exam_time(request):
     # ExamPlan
-    site_date = datetime.datetime.strptime('2021-12-5', '%Y-%m-%d')
+    site_date = datetime.datetime.strptime('2022-7-3', '%Y-%m-%d')
     today = datetime.datetime.today()
     interval_days = (site_date - today).days
     return render(request, 'tool/exam_time.html', context={'interval_days':interval_days})
@@ -82,6 +82,9 @@ def verb_deformed_view(request):
     if deform_what == "13":
         return JsonResponse({'msg': turn2stop(verb_d)})
     return JsonResponse({'msg': 'miss'})
+
+def interview_dialogue_view(request):
+    return render(request, 'tool/interview_dialogue.html')
 
 def turn2real(verb_d):
     return verb_d
