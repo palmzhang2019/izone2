@@ -112,3 +112,4 @@ static/
 izone/database_config.py
 .idea
 locale/*
+/media/interview/
