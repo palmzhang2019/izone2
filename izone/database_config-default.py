@@ -1,5 +1,5 @@
 data_config = {
-    'DATAPASS': "daidai",
+    'DATAPASS': "U2FsdGVkX1/EJ7v1tewNVALH8Z42iKbl",
     'DATANAME': "www_nihonstudy_n",
     'DATAUSER': "root",
     'DATAPORT': 3306,
