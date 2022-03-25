@@ -12,6 +12,10 @@ register = template.Library()
 def cut_port(uri):
     return uri.replace(":8001", "")
 
+@register.filter(name='replace_http')
+def replace_http(uri):
+    return uri.replace("http", "https")
+
 # 文章相关标签函数
 @register.simple_tag
 def get_article_list(sort=None, num=None):
