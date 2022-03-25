@@ -8,6 +8,10 @@ import re
 register = template.Library()
 
 
+@register.filter(name='cut_port')
+def cut_port(uri):
+    return uri.replace(":8001", "")
+
 # 文章相关标签函数
 @register.simple_tag
 def get_article_list(sort=None, num=None):
