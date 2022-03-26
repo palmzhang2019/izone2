@@ -52,7 +52,6 @@ urlpatterns = [
     path('accounts/', include(('oauth.urls', "oauth"), namespace='oauth')),  # oauth,只展现一个用户登录界面
     path('robots.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),  # robots
     path('ads.txt', TemplateView.as_view(template_name='ads.txt', content_type='text/plain')),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),  # 网站地图
 ]
 
 urlpatterns += i18n_patterns(
@@ -61,6 +60,7 @@ urlpatterns += i18n_patterns(
     path('ads\.txt', TemplateView.as_view(template_name='ads.txt', content_type='text/plain')),  # ads
     path('feed/', AllArticleRssFeed(), name='rss'),  # rss订阅
     path('tool/', include(('tool.urls', "tool"), namespace='tool')),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),  # 网站地图
     prefix_default_language=False
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # 加入这个才能显示media文件
 
