@@ -51,14 +51,14 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),  # allauth
     path('accounts/', include(('oauth.urls', "oauth"), namespace='oauth')),  # oauth,只展现一个用户登录界面
     path('robots.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),  # robots
-    path('ads.txt', TemplateView.as_view(template_name='ads.txt', content_type='text/plain'))
+    path('ads.txt', TemplateView.as_view(template_name='ads.txt', content_type='text/plain')),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),  # 网站地图
 ]
 
 urlpatterns += i18n_patterns(
     path('', include(('blog.urls', 'blog'), namespace='blog')),  # blog
     path('comment/', include(('comment.urls', "comment"), namespace='comment')),  # comment
     path('ads\.txt', TemplateView.as_view(template_name='ads.txt', content_type='text/plain')),  # ads
-    path('sitemap\.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),  # 网站地图
     path('feed/', AllArticleRssFeed(), name='rss'),  # rss订阅
     path('tool/', include(('tool.urls', "tool"), namespace='tool')),
     prefix_default_language=False
