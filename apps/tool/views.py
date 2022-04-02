@@ -87,11 +87,12 @@ def verb_deformed_view(request):
 
 def interview_dialogue_view(request):
     tag_id = request.GET.get('tag')
-    tag_name = dialogue_name_dict[tag_id]
 
     if not tag_id:
         file_list = []
+        tag_name = None
     else:
+        tag_name = dialogue_name_dict[tag_id]
         dir_list = dialogue_dict[tag_id]
         file_list = list()
         for dir in dir_list:
