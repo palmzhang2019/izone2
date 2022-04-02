@@ -1,4 +1,5 @@
 import datetime
+import json
 from xml import etree
 import requests
 from django.shortcuts import render
@@ -12,10 +13,11 @@ from .c_list import *
 import re
 import markdown
 from .models import Exam, ExamRemind
-from django.contrib import messages
+from izone.settings import MEDIA_ROOT
+import os
+from izone.utils import dialogue_dict, dialogue_name_dict
+import random
 
-
-# Create your views here.
 
 def Toolview(request):
     return render(request, 'tool/tool.html')
@@ -84,7 +86,30 @@ def verb_deformed_view(request):
     return JsonResponse({'msg': 'miss'})
 
 def interview_dialogue_view(request):
-    return render(request, 'tool/interview_dialogue.html')
+    tag_id = request.GET.get('tag')
+    tag_name = dialogue_name_dict[tag_id]
+
+    if not tag_id:
+        file_list = []
+    else:
+        dir_list = dialogue_dict[tag_id]
+        file_list = list()
+        for dir in dir_list:
+            mp3_sources = os.path.join(MEDIA_ROOT, f"interview/{dir}/")
+            files = os.listdir(mp3_sources)
+            drop_list = list(set([file[:3] for file in files]))
+            drop_list.sort()
+            dedupliced=[]
+            for d in drop_list:
+                data = random.choice(list(filter(lambda x: x.startswith(d), files)))
+                dedupliced.append(data)
+
+            sentense_list = list()
+            for file in dedupliced:
+                if file.startswith("0-"):
+                    sentense_list.append(str(dir)+"/"+file)
+            file_list.append(sentense_list)
+    return render(request, 'tool/interview_dialogue.html', {"dir_list": file_list, "tag_name": tag_name})
 
 def turn2real(verb_d):
     return verb_d
