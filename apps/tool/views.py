@@ -90,14 +90,19 @@ def interview_dialogue_view(request):
 
     if not tag_id:
         file_list = []
-        tag_name = None
+        tag_name = "还没有选择，请选择一个模拟情景"
     else:
         tag_name = dialogue_name_dict[tag_id]
         dir_list = dialogue_dict[tag_id]
         file_list = list()
         for dir in dir_list:
             mp3_sources = os.path.join(MEDIA_ROOT, f"interview/{dir}/")
-            files = os.listdir(mp3_sources)
+            try:
+                files = os.listdir(mp3_sources)
+            except FileNotFoundError:
+                file_list = []
+                tag_name = "页面暂未完成开发，敬请期待。。。"
+                continue
             drop_list = list(set([file[:3] for file in files]))
             drop_list.sort()
             dedupliced=[]
